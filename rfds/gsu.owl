@@ -1,0 +1,95 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:User="http://www.aicmez.com/user/#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.0="http://www.aicmez.com/user#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <rdf:Description rdf:about="http://www.aicmez.com/user/#Kalamar">
+    <User:Interests>Morties</User:Interests>
+    <User:Interests>Rickasd</User:Interests>
+    <User:Password>1</User:Password>
+    <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
+    <User:Username>Kalamar</User:Username>
+    <User:Job>CSasd</User:Job>
+    <User:Surname>Marsad</User:Surname>
+    <User:Interests>kalamar</User:Interests>
+    <User:Name>Kalaasd</User:Name>
+    <User:Interests>and</User:Interests>
+    <User:BrowseHistory>www.google.comasd</User:BrowseHistory>
+    <User:Role>Studentasd</User:Role>
+    <User:BrowseHistory>www.google.fr</User:BrowseHistory>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.aicmez.com/user/#Lkl">
+    <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
+    <User:Username>Lkl</User:Username>
+    <User:Password>123</User:Password>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.aicmez.com/user/#Quep">
+    <User:BrowseHistory></User:BrowseHistory>
+    <User:Name>Arda</User:Name>
+    <User:Interests>KAla</User:Interests>
+    <User:Role>asd</User:Role>
+    <User:Job>kalamar</User:Job>
+    <User:Role></User:Role>
+    <User:Password>12</User:Password>
+    <User:Surname>kalamari</User:Surname>
+    <User:Surname>asd</User:Surname>
+    <User:Interests>Marlar</User:Interests>
+    <User:Role>Student</User:Role>
+    <User:Job>Computer Engineer</User:Job>
+    <User:Surname>Icmez</User:Surname>
+    <User:Username>Quep</User:Username>
+    <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.aicmez.com/user/#Paoli">
+    <User:Job>CS</User:Job>
+    <User:Interests>Machines</User:Interests>
+    <User:BrowseHistory>corsica.co</User:BrowseHistory>
+    <User:Password>1234</User:Password>
+    <User:BrowseHistory>oxford.co.ux</User:BrowseHistory>
+    <User:Role>Prod</User:Role>
+    <User:Interests>Electricity</User:Interests>
+    <User:BrowseHistory>www.stanford.edu</User:BrowseHistory>
+    <User:Name>Cris</User:Name>
+    <User:Surname>Paoli</User:Surname>
+    <User:Username>Paoli</User:Username>
+    <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
+    <User:Interests>Computers</User:Interests>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.aicmez.com/user/#Muep">
+    <User:Password>2222</User:Password>
+    <User:Interests>MProgramming2</User:Interests>
+    <User:Interests>MProgramming</User:Interests>
+    <User:Interests>MProgramming3</User:Interests>
+    <User:Name>Marda</User:Name>
+    <User:BrowseHistory>www.m1.com</User:BrowseHistory>
+    <User:BrowseHistory>www.m3.com</User:BrowseHistory>
+    <User:Username>Muep</User:Username>
+    <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
+    <User:BrowseHistory>www.m21.com</User:BrowseHistory>
+    <User:Surname>Micmez</User:Surname>
+    <User:Job>Computer Mengineer</User:Job>
+    <User:ProfileId>00002</User:ProfileId>
+    <User:Role>Student</User:Role>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.aicmez.com/user/#Mertcan">
+    <User:Password>123</User:Password>
+    <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
+    <User:BrowseHistory>www.google.fr</User:BrowseHistory>
+    <User:Interests>Balik</User:Interests>
+    <User:Name>Mertcan</User:Name>
+    <User:Role>Student</User:Role>
+    <User:Interests>At</User:Interests>
+    <User:Interests>Kalamar</User:Interests>
+    <User:Username>Mertcan</User:Username>
+    <User:BrowseHistory>www.stackoverflow.com</User:BrowseHistory>
+    <User:Surname>Madenci</User:Surname>
+    <User:BrowseHistory>www.linkedin.com</User:BrowseHistory>
+    <User:Job>Industrial Engineer</User:Job>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.aicmez.com/user/#Metin">
+    <User:Password>123</User:Password>
+    <User:Username>Metin</User:Username>
+    <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
+  </rdf:Description>
+</rdf:RDF>

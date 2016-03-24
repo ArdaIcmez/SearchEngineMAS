@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns="http://www.aicmez.com/user/#"
+         xmlns:User="http://www.aicmez.com/user/#"
+         xml:base="http://www.aicmez.com/user/">
+
+    <owl:Ontology rdf:about="">
+        <rdfs:comment>
+        User OWL Ontology                          
+      Author: Arda ICMEZ                                 
+        </rdfs:comment>
+    </owl:Ontology>
+
+     <owl:Class rdf:ID="User">
+          <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	  <rdfs:comment> User class which will contain personal information </rdfs:comment>
+     </owl:Class>
+
+     <owl:DatatypeProperty rdf:ID="ProfileID">
+          <rdfs:domain rdf:resource="#User"/>
+          <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+     </owl:DatatypeProperty>
+
+     <owl:DatatypeProperty rdf:ID="Name">
+          <rdfs:domain rdf:resource="#User"/>
+          <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+     </owl:DatatypeProperty>
+
+     <owl:DatatypeProperty rdf:ID="Surname">
+          <rdfs:domain rdf:resource="#User"/>
+          <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+     </owl:DatatypeProperty>
+     
+     <owl:DatatypeProperty rdf:ID="Username">
+          <rdfs:domain rdf:resource="#User"/>
+          <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+     </owl:DatatypeProperty>
+
+     <owl:DatatypeProperty rdf:ID="Password">
+          <rdfs:domain rdf:resource="#User"/>
+          <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+     </owl:DatatypeProperty>
+
+     <owl:DatatypeProperty rdf:ID="Job">
+          <rdfs:domain rdf:resource="#User"/>
+          <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+     </owl:DatatypeProperty>
+   
+     <owl:DatatypeProperty rdf:ID="Role">
+          <rdfs:domain rdf:resource="#User"/>
+          <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+     </owl:DatatypeProperty>
+     
+     <owl:DatatypeProperty rdf:ID="Interests">
+          <rdfs:domain rdf:resource="#User"/>
+	  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+     </owl:DatatypeProperty>
+
+     <owl:DatatypeProperty rdf:ID="BrowseHistory">
+          <rdfs:domain rdf:resource="#User"/>
+	  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+     </owl:DatatypeProperty>
+
+
+</rdf:RDF>

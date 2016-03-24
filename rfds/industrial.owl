@@ -1,0 +1,35 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:User="http://www.aicmez.com/user/#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.0="http://www.aicmez.com/user#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <rdf:Description rdf:about="http://www.aicmez.com/user/#Enes">
+    <User:Job>Industrial Engineer</User:Job>
+    <User:Interests>Films</User:Interests>
+    <User:Name>Enes</User:Name>
+    <User:Interests>Cartoons</User:Interests>
+    <User:Surname>Kaldirimci</User:Surname>
+    <User:Password>1234</User:Password>
+    <User:BrowseHistory>web.mit.edu</User:BrowseHistory>
+    <User:Interests>Animes</User:Interests>
+    <User:Role>Student</User:Role>
+    <User:Username>Enes</User:Username>
+    <User:BrowseHistory>www.math.co.uk</User:BrowseHistory>
+    <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.aicmez.com/user/#Mertcan">
+    <User:BrowseHistory>www.oracle.com</User:BrowseHistory>
+    <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
+    <User:Password>12</User:Password>
+    <User:Surname>Madencioglu</User:Surname>
+    <User:Name>Mertcan</User:Name>
+    <User:Role>Student</User:Role>
+    <User:Interests>Kalamar</User:Interests>
+    <User:Username>Mertcan</User:Username>
+    <User:BrowseHistory>www.duck.duck</User:BrowseHistory>
+    <User:Job>Industrial Engineer</User:Job>
+    <User:Interests>Patlican</User:Interests>
+    <User:Interests>Brokoli</User:Interests>
+  </rdf:Description>
+</rdf:RDF>
