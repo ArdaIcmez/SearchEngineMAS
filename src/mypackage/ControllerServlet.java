@@ -15,47 +15,51 @@ import jade.util.leap.Properties;
 import jade.wrapper.ControllerException;
 import jade.wrapper.gateway.*;
 import myagents.*;
-import myfunctions.*;
-import ontologies.*;
+import ontologies.profile.*;
+import ontologies.search.*;
+import organizations.*;
 
-public class ControllerServlet extends HttpServlet implements ProfileVocabulary {  
+public class ControllerServlet extends HttpServlet implements ProfileVocabulary,SearchVocabulary {  
     /**
 	 * Register -> User already exists?
 	 */
 	private static final long serialVersionUID = 1L;
-	private static ProfileOperation profileOperation;
-	
+	private ProfileOperation profileOperation;
+	private	SearchOperation searchOperation;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)  
             throws ServletException, IOException {  
         response.setContentType("text/html");  
         HttpSession session = request.getSession();
-        FuncBean execFunc = new FuncBean();
         String todo = request.getParameter("todo");
         
         switch(todo)
         {
 	        case "Search": 
 	        {
-	        	String word=request.getParameter("searchword");
-	        	session.setAttribute("word", word);
-	            System.out.println("Word being searched : "+word);  
-	            SearchBean bean = new SearchBean();
-	            bean.setWord(word);
-	            AgentMessage myMsg = new AgentMessage();
-	            myMsg.setMsgObj(bean);
+	        	String searchword = request.getParameter("searchword");
+	        	
+	        	//Set up the operation for MAS
+	        	searchOperation = new SearchOperation();
+	        	SearchBean myBean = new SearchBean();
+	        	myBean.setWord(searchword);
+	            searchOperation.setSearch(myBean);
+	            searchOperation.setType(SEARCH_KEYWORD);
 	            try {
-					JadeGateway.execute(myMsg);
+					JadeGateway.execute(searchOperation);
 				} catch (ControllerException | InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-	            //execFunc.doSearch(bean);
-	            bean = (SearchBean) myMsg.getMsgObj();
-	            session.setAttribute("bean",bean);
+	            myBean = (SearchBean) searchOperation.getSearch();
+	            session.setAttribute("bean",myBean);
 	            UserBean curUser = (UserBean)session.getAttribute("curUser");
 	            if (curUser != null) {
-		            execFunc.doAddHistory(curUser, word);
-		            session.setAttribute("curUser", curUser);
+	            	searchOperation.setNickname(curUser.getNickname());
+	            	searchOperation.setType(ADD_SEARCH_HISTORY);
+	            	try {
+						JadeGateway.execute(searchOperation);
+					} catch (ControllerException | InterruptedException e) {
+						e.printStackTrace();
+					}
 	            }
 	            RequestDispatcher rd=request.getRequestDispatcher("searchresults.jsp");  
 	            rd.forward(request, response); 
@@ -89,15 +93,6 @@ public class ControllerServlet extends HttpServlet implements ProfileVocabulary 
 	            } catch(Exception e) { e.printStackTrace(); } 
 	        	usr = profileOperation.getUser();
 	        	if(usr.getAuthentication()) {
-	        		profileOperation.setUser(usr);
-	        		profileOperation.setType(POPULATE_PROFILE);
-	        		try {
-						JadeGateway.execute(profileOperation);
-					} catch (ControllerException | InterruptedException e) {
-						e.printStackTrace();
-					}
-	        		usr = (UserBean) profileOperation.getUser();
-	        		
 	        		session.setAttribute("curUser", usr);
 	        		RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
 		            rd.forward(request, response); 
@@ -141,8 +136,20 @@ public class ControllerServlet extends HttpServlet implements ProfileVocabulary 
 	        }
 	        case "Edit Profile" :
 	        {
+	        	profileOperation = new ProfileOperation();
+	        	UserBean usr = (UserBean)session.getAttribute("curUser");
+	        	profileOperation.setUser(usr);
+        		profileOperation.setType(POPULATE_PROFILE);
+        		try {
+					JadeGateway.execute(profileOperation);
+				} catch (ControllerException | InterruptedException e) {
+					e.printStackTrace();
+				}
+        		usr = (UserBean) profileOperation.getUser();
+        		session.setAttribute("curUser", usr);
 	        	RequestDispatcher rd=request.getRequestDispatcher("EditProfile.jsp");  
 	            rd.forward(request, response);
+	            profileOperation = null;
 	            break;
 	        }
 	        
@@ -212,13 +219,23 @@ public class ControllerServlet extends HttpServlet implements ProfileVocabulary 
 	        	session.setAttribute("curUser", null);
 	        	RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
 	            rd.forward(request, response);
+	            profileOperation = null;
 	        	break;
 	        }
 	        
 	        case "clk" :
 	        {
 	        	String urlRedirect = request.getParameter("page");
-	        	List<UserBean> userList = execFunc.doPageResult(urlRedirect);
+	        	FileResult fileRes = new FileResult();
+	        	fileRes.setUrl(urlRedirect);
+	        	fileRes.setType(LOAD_USERS);
+	        	try {
+	        		JadeGateway.execute(fileRes);
+	        	}
+	        	catch(Exception e) {
+	        		e.printStackTrace();
+	        	}
+	        	jade.util.leap.List userList = fileRes.getUserList();
 	        	session.setAttribute("userList", userList);
 	        	RequestDispatcher rd=request.getRequestDispatcher("PageResult.jsp");  
 	            rd.forward(request, response);

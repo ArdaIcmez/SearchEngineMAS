@@ -3,7 +3,6 @@ package myagents;
 
 import jade.content.Concept;
 import jade.content.ContentElement;
-import jade.content.abs.AbsPrimitive;
 import jade.content.lang.Codec;
 import jade.content.lang.Codec.CodecException;
 import jade.content.lang.sl.SLCodec;
@@ -15,8 +14,9 @@ import jade.lang.acl.*;
 import jade.content.onto.Ontology;
 import jade.content.onto.OntologyException;
 import jade.content.onto.basic.*;
-import myfunctions.FuncBean;
-import ontologies.*;
+import ontologies.profile.*;
+import roles.user.ProfileHandle;
+
 
 public class ProfileAgent extends Agent implements ProfileVocabulary{
 	/**
@@ -24,7 +24,7 @@ public class ProfileAgent extends Agent implements ProfileVocabulary{
 	 */
 	private static final long serialVersionUID = 1L;
 	private Object obj = null;
-	private FuncBean execFunc = new FuncBean();
+	private ProfileHandle roleExecution = new ProfileHandle();
 	private Codec codec = new SLCodec();
 	private Ontology ontology = ProfileOntology.getInstance();
 	
@@ -34,6 +34,8 @@ public class ProfileAgent extends Agent implements ProfileVocabulary{
 	      getContentManager().registerLanguage(codec);
 	      getContentManager().registerOntology(ontology);
 	      
+	      
+	    // Set the behaviour to receive messages.
 		 addBehaviour(new CyclicBehaviour(this)
      	{
 		public void action() {
@@ -51,7 +53,11 @@ public class ProfileAgent extends Agent implements ProfileVocabulary{
 							
 							System.out.print("\n###Request from : " + msg.getSender().getLocalName());
 							if(action instanceof ProfileOperation) {
-								addBehaviour(new HandleOperation(myAgent, msg));
+								addBehaviour(new HandleProfileOperation(myAgent, msg));
+							}
+							else if(action instanceof FileResult) {
+								System.out.println("FILERESULT GELDIIII");
+								addBehaviour(new HandleFileResult(myAgent, msg));
 							}
 							else replyNotUnderstood(msg);
 							break;
@@ -60,8 +66,7 @@ public class ProfileAgent extends Agent implements ProfileVocabulary{
 							break;
 					}
 				} catch ( CodecException | OntologyException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.out.println("\n ### ProfileAgent does not know this ontology");
 				} 
              } 
              else {
@@ -71,12 +76,12 @@ public class ProfileAgent extends Agent implements ProfileVocabulary{
      		});
 	}
 	
-	class HandleOperation extends OneShotBehaviour {
-		// ------------------------------------------------  Handler for an Operation request
+	class HandleProfileOperation extends OneShotBehaviour {
+		// ------------------------------------------------  Handler for an Profile Operation request
 
 		      private ACLMessage request;
 
-		      HandleOperation(Agent a, ACLMessage request) {
+		      HandleProfileOperation(Agent a, ACLMessage request) {
 
 		         super(a);
 		         this.request = request;
@@ -102,6 +107,42 @@ public class ProfileAgent extends Agent implements ProfileVocabulary{
 		      }
 		   }
 	
+	class HandleFileResult extends OneShotBehaviour {
+		// ------------------------------------------------  Handler for an Profile Operation request
+
+		      private ACLMessage request;
+
+		      HandleFileResult(Agent a, ACLMessage request) {
+
+		         super(a);
+		         this.request = request;
+		      }
+
+		      public void action() {
+
+		         try {
+		            ContentElement content = getContentManager().extractContent(request);
+		            FileResult fr = (FileResult)((Action)content).getAction();
+		            ACLMessage reply = request.createReply();
+		            Object userList = null;
+		            if(fr.getType() == LOAD_USERS) {
+		            	userList = roleExecution.doPageResult(fr.getUrl()); 
+		            }
+		            if (userList == null) {
+		            	replyNotUnderstood(request);
+		            	System.out.println("FILERESULT ANLASILMADI :(");
+		            }
+		            else {
+		               reply.setPerformative(ACLMessage.INFORM);
+		               Result result = new Result((Action)content, userList);
+		               getContentManager().fillContent(reply, result);
+		               send(reply);
+		               System.out.println("\n### ProfileAgent : Operation processed.FILERESULT ###");
+		            }
+		         }
+		         catch(Exception ex) { ex.printStackTrace(); }
+		      }
+		   }
 	void replyNotUnderstood(ACLMessage msg) {
 		// ----------------------------------------- Message is not understood
 
@@ -120,23 +161,23 @@ public class ProfileAgent extends Agent implements ProfileVocabulary{
 	// -------------------------------------------
 		UserBean usr = po.getUser();
 		if (po.getType() == MODIFY_PROFILE) {
-			usr = execFunc.doEditGeneral(usr,po.getModifyUser());
+			usr = roleExecution.doEditGeneral(usr,po.getModifyUser());
 			System.out.println("### ProfileAgent : MODIFY_PROFILE called ###");
 	    }
 		else if (po.getType() == AUTHENTICATE_USER) {
-			usr.setAuthentication(execFunc.doAuthentication(usr));
+			usr.setAuthentication(roleExecution.doAuthentication(usr));
 			System.out.println("### ProfileAgent : AUTHENTICATE_USER called ###");
 	    }
 		else if (po.getType() == REGISTER_USER) {
-			execFunc.doRegister(usr.getNickname(), usr.getPassword());
+			roleExecution.doRegister(usr.getNickname(), usr.getPassword());
 			System.out.println("### ProfileAgent : REGISTER_USER called ###");
 		}
 		else if (po.getType() == DELETE_USER) {
-			execFunc.doDeleteProfile(usr.getNickname());
+			roleExecution.doDeleteProfile(usr.getNickname());
 			System.out.println("### ProfileAgent : DELETE_USER called ###");
 		}
 		else if (po.getType() == POPULATE_PROFILE) {
-			usr = execFunc.doPopulate(usr, "");
+			usr = roleExecution.doPopulate(usr, "");
 			System.out.println("### ProfileAgent : POPULATE_PROFILE called ###");
 		}
 		else {

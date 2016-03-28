@@ -1,5 +1,5 @@
 <%@page import="jade.util.leap.Iterator"%>
-<%@page import="ontologies.*"%>  
+<%@page import="ontologies.profile.*"%>  
 <%@page import="jade.util.leap.ArrayList.*"%> 
 <body bgcolor="#E6E6FA"> 
 <h2>User Profile</h2>

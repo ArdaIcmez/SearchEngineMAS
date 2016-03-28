@@ -1,4 +1,4 @@
-<%@page import="ontologies.*"%>  
+<%@page import="ontologies.profile.*"%>  
 <body bgcolor="#E6E6FA"> 
 <%UserBean user = (UserBean)session.getAttribute("curUser");  %>
 <form action="ControllerServlet" method="post">

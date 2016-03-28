@@ -1,5 +1,4 @@
 package myagents;
-import jade.content.Concept;
 import jade.content.ContentElement;
 import jade.content.lang.*;
 import jade.content.lang.Codec.CodecException;
@@ -17,28 +16,30 @@ import jade.lang.acl.UnreadableException;
 import jade.wrapper.AgentController;
 import jade.wrapper.gateway.*;
 
-import java.io.IOException;
-import java.io.Serializable;
-import java.util.Properties;
-import myfunctions.FuncBean;
-import ontologies.*;
+import ontologies.profile.*;
+import ontologies.search.*;
 
 public class MyGatewayAgent extends GatewayAgent {
 	/**
 	 * 
 	 */
-
-	ProfileOperation theOper;
-	AMSAgentDescription [] agents =null;
+	
 	private Codec codec = new SLCodec();
 	private Ontology profileOntology = ProfileOntology.getInstance();
-	
+	private Ontology searchOntology = SearchOntology.getInstance();
+	AMSAgentDescription [] agents =null;
+	ProfileOperation profOperation;
+	SearchOperation searchOperation;
+	FileResult resultOperation;
 	protected void processCommand(Object obj) {
 		
+		System.out.println("\n### GatewayAgent : Got "+obj.getClass()+" from servlet. ###");
+		
+		// Requested operation belongs to User Organization
 		if(obj instanceof ProfileOperation) {
-			System.out.println("\n### GatewayAgent : Got "+obj.getClass()+" from servlet. ###");
 			
-			this.theOper = (ProfileOperation) obj;
+			
+			this.profOperation = (ProfileOperation) obj;
 			// Here, I can ask agents & send only to profile agents
 			ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
 			
@@ -49,7 +50,48 @@ public class MyGatewayAgent extends GatewayAgent {
 			for (AMSAgentDescription recAgents : agents) {
 				if(recAgents.getName().equals(this.getAID())==false) {
 					try {
-						getContentManager().fillContent(msg, new Action(recAgents.getName(),this.theOper));
+						getContentManager().fillContent(msg, new Action(recAgents.getName(),this.profOperation));
+						msg.addReceiver(recAgents.getName());
+					} catch ( CodecException | OntologyException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+            send(msg);
+		}
+		
+		else if(obj instanceof FileResult) {	
+			this.resultOperation = (FileResult) obj;
+			
+			ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
+			msg.setLanguage(codec.getName());
+			msg.setOntology(profileOntology.getName());
+			
+			for (AMSAgentDescription recAgents : agents) {
+				if(recAgents.getName().equals(this.getAID())==false) {
+					try {
+						getContentManager().fillContent(msg, new Action(recAgents.getName(),this.resultOperation));
+						msg.addReceiver(recAgents.getName());
+					} catch ( CodecException | OntologyException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+            send(msg);
+		}
+		
+		// Requested operation belongs to Search Organization
+		else if(obj instanceof SearchOperation) {
+			this.searchOperation = (SearchOperation) obj;
+			
+			ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
+			msg.setLanguage(codec.getName());
+			msg.setOntology(searchOntology.getName());
+			
+			for (AMSAgentDescription recAgents : agents) {
+				if(recAgents.getName().equals(this.getAID())==false) {
+					try {
+						getContentManager().fillContent(msg, new Action(recAgents.getName(),this.searchOperation));
 						msg.addReceiver(recAgents.getName());
 					} catch ( CodecException | OntologyException e) {
 						e.printStackTrace();
@@ -64,6 +106,7 @@ public class MyGatewayAgent extends GatewayAgent {
     {	
 		getContentManager().registerLanguage(codec);
     	getContentManager().registerOntology(profileOntology);
+    	getContentManager().registerOntology(searchOntology);
     	
 		// Get all agents in the current container
         try {
@@ -76,6 +119,7 @@ public class MyGatewayAgent extends GatewayAgent {
         	e.printStackTrace();
         }
         
+        //Print out all the agents in the system
         AID myID = this.getAID();
         for (AMSAgentDescription agent : agents) {
         	AID agentID = agent.getName();
@@ -85,6 +129,7 @@ public class MyGatewayAgent extends GatewayAgent {
     			);
         }
         
+        // Adding the Message receiver behaviour
         addBehaviour(new CyclicBehaviour(this) 	{
         	public void action() {
         		 
@@ -104,19 +149,28 @@ public class MyGatewayAgent extends GatewayAgent {
     							Result result = (Result) content;
     							
     							if (result.getValue() instanceof UserBean) {
-    								theOper.setUser((UserBean)result.getValue());
-    								System.out.println("### GatewayAgent : UserBean set to release. ###");
+    								profOperation.setUser((UserBean)result.getValue());
+    								releaseCommand(profOperation);
     							}
+    							else if(result.getValue() instanceof SearchBean) {
+    								searchOperation.setSearch((SearchBean)result.getValue());
+    								releaseCommand(searchOperation);
+    							}
+    							else if(result.getValue() instanceof jade.util.leap.List) {
+    								resultOperation.setUserList((jade.util.leap.List)result.getValue());
+    								releaseCommand(resultOperation);
+    							}
+    							System.out.println("### GatewayAgent : "+result.getClass()+" released. ###");
     						}
-    						releaseCommand(theOper);
+    						
     					} catch ( CodecException | OntologyException e) {
-    						// TODO Auto-generated catch block
     						e.printStackTrace();
     					}
                 	}
                 } else block();
              }
         		});
+        
         super.setup();
     }
 }

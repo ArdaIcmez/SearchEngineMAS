@@ -1,14 +1,15 @@
-<%@page import="ontologies.*"%>
-<%@page import="java.util.*"%>  
+<%@page import="ontologies.profile.*"%>
+<%@page import="ontologies.search.*"%>  
 <body bgcolor="#E6E6FA"> 
 <h2>Result Contents</h2>
-<%List<UserBean> userList = (List<UserBean>)session.getAttribute("userList"); 
+<%jade.util.leap.List userList = (jade.util.leap.List)session.getAttribute("userList"); 
   SearchBean searchBean = (SearchBean)session.getAttribute("bean");
   String term = searchBean.getWord();
+  jade.util.leap.Iterator iter = userList.iterator();
   %>
 <form action="ControllerServlet" method="post">
 <table border=1 frame=void rules=rows>
-<% for(UserBean user:userList) {  
+<% while(iter.hasNext()) { UserBean user = (UserBean)iter.next(); 
 %>
 	<tr>
 		<td>
@@ -55,7 +56,7 @@
 			Interests : 
 		</td>
 		<td>
-			<% Iterator myIter = user.getInterests().iterator(); 
+			<% jade.util.leap.Iterator myIter = user.getInterests().iterator(); 
 			while (myIter.hasNext()) {
 				String curInterest = myIter.next().toString();
 				if (term.compareTo(curInterest)==0){
