@@ -1,0 +1,70 @@
+<rdf:RDF
+xmlns:Bicycle="http://utbm.acsp.fr/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xml:base="http://utbm.acsp.fr/Bicycle#">
+
+<rdf:Description rdf:ID="SpeedMax">
+<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+<Bicycle:NameRdf>SpeedMax</Bicycle:NameRdf>
+<Bicycle:RoleCreateurConnaissance>Concepteur</Bicycle:RoleCreateurConnaissance>
+<Bicycle:CreerPar>JVincent</Bicycle:CreerPar>
+<Bicycle:DateDebut>23/10/2006</Bicycle:DateDebut>
+<Bicycle:DateFin>28/12/2012</Bicycle:DateFin>
+<Bicycle:Commentaire>SpeedMax lekdioui</Bicycle:Commentaire>
+<Bicycle:domaines>Maths</Bicycle:domaines>
+<Bicycle:Parent>SpeedMax-S</Bicycle:Parent>
+</rdf:Description>
+<rdf:Description rdf:ID="SpeedMax-M">
+<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+<rdfs:subClassOf rdf:resource="#SpeedMax"/>
+<Bicycle:Name>SpeedMax-M</Bicycle:Name>
+<Bicycle:RoleCreateurConnaissance>designer</Bicycle:RoleCreateurConnaissance>
+<Bicycle:CreerPar>inaya</Bicycle:CreerPar>
+<Bicycle:DateDebut>23/10/2006</Bicycle:DateDebut>
+<Bicycle:DateFin>02/01/2013</Bicycle:DateFin>
+<Bicycle:Commentaire>The Speedmax CF 9.0 is a top of the line aero bike.Manufactured by Canyon, the Speedman 9.0 was conceived to give triathletes the supreme cycling experience when running against the clock. Founded in 1985 Canyon has over 25 years of craftsmanship and engineering experience  and was able to translate this experience into the Speedmax CF 9.0 frame. This monocoque frame was especially designed to be aero dynamical, having low wind resistance, and the equipment chosen by Canyon brings out the best the frame can offer.Among the frames characteristics is an oversized bottom bracket shell. This provides a high bottom bracket stiffness which helps the athlete convert energy into propulsion. It also has an aero post with wide adjustment allowing the rider to adjust it easily </Bicycle:Commentaire>
+<Bicycle:domaines>Maths</Bicycle:domaines>
+<Bicycle:FramesetLength>LILO</Bicycle:FramesetLength>
+<Bicycle:SeatTubeLength>8000000000</Bicycle:SeatTubeLength>
+<Bicycle:TopTubeLength>570</Bicycle:TopTubeLength>
+<Bicycle:HeadTubeLength>125</Bicycle:HeadTubeLength>
+<Bicycle:HeadTubeAngle>72.5</Bicycle:HeadTubeAngle>
+<Bicycle:SeatTubeAngle>75</Bicycle:SeatTubeAngle>
+<Bicycle:ChainstayLengthMaxi>395</Bicycle:ChainstayLengthMaxi>
+<Bicycle:ChainstayLengthMini>380</Bicycle:ChainstayLengthMini>
+<Bicycle:WheelBaseMaxi>1010</Bicycle:WheelBaseMaxi>
+<Bicycle:WheelBaseMini>995</Bicycle:WheelBaseMini>
+<Bicycle:Reach>429</Bicycle:Reach>
+<Bicycle:Stack>520</Bicycle:Stack>
+<Bicycle:HandlebarName>Alu X</Bicycle:HandlebarName>
+<Bicycle:HandlebarWeight>927g</Bicycle:HandlebarWeight>
+<Bicycle:HandlebarMaterial>Aluminium</Bicycle:HandlebarMaterial>
+</rdf:Description>
+<rdf:Description rdf:ID="SpeedMax-S">
+<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+<rdfs:subClassOf rdf:resource="#SpeedMax"/>
+<Bicycle:Name>SpeedMax-S</Bicycle:Name>
+<Bicycle:RoleCreateurConnaissance>Concepteur</Bicycle:RoleCreateurConnaissance>
+<Bicycle:CreerPar>Ajeunot</Bicycle:CreerPar>
+<Bicycle:DateDebut>23/10/2006</Bicycle:DateDebut>
+<Bicycle:DateFin>07/01/2012</Bicycle:DateFin>
+<Bicycle:Commentaire> The Speedmax CF 9.0 is a top of the line aero bike. Manufactured by Canyon, the Speedman 9.0 was conceived to give triathletes the supreme cycling experience when running against the clock. Founded in 1985 Canyon has over 25 years of craftsmanship and engineering experience  and was able to translate this experience into the Speedmax CF 9.0 frame.</Bicycle:Commentaire>
+<Bicycle:domaines>Maths</Bicycle:domaines>
+<Bicycle:FramesetLength>S</Bicycle:FramesetLength>
+<Bicycle:SeatTubeLength>525</Bicycle:SeatTubeLength>
+<Bicycle:TopTubeLength>545</Bicycle:TopTubeLength>
+<Bicycle:HeadTubeLength>110</Bicycle:HeadTubeLength>
+<Bicycle:HeadTubeAngle>72.5</Bicycle:HeadTubeAngle>
+<Bicycle:SeatTubeAngle>75</Bicycle:SeatTubeAngle>
+<Bicycle:ChainstayLengthMaxi>395</Bicycle:ChainstayLengthMaxi>
+<Bicycle:ChainstayLengthMini>380</Bicycle:ChainstayLengthMini>
+<Bicycle:WheelBaseMaxi>985</Bicycle:WheelBaseMaxi>
+<Bicycle:WheelBaseMini>970</Bicycle:WheelBaseMini>
+<Bicycle:Reach>409</Bicycle:Reach>
+<Bicycle:Stack>506</Bicycle:Stack>
+<Bicycle:HandlebarName>Alu X</Bicycle:HandlebarName>
+<Bicycle:HandlebarWeight>927g</Bicycle:HandlebarWeight>
+<Bicycle:HandlebarMaterial>Aluminium</Bicycle:HandlebarMaterial>
+</rdf:Description>
+</rdf:RDF>

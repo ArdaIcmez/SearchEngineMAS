@@ -1,9 +1,5 @@
 package myagents;
 
-import java.io.IOException;
-import java.io.Serializable;
-
-import javax.servlet.http.HttpSession;
 
 import jade.content.Concept;
 import jade.content.ContentElement;
@@ -124,6 +120,11 @@ public class SearchAgent extends Agent implements SearchVocabulary {
 			else if (so.getType() == ADD_SEARCH_HISTORY) {
 				roleExecution.doAddHistory(so.getNickname(), search.getWord());
 				System.out.println("### SearchAgent : ADD_SEARCH_HISTORY called ###");
+		    }
+			else if (so.getType() == LOAD_PAGE) {
+				jade.util.leap.List  resList = roleExecution.doPageResult(so.getUrl());
+				System.out.println("### SearchAgent : LOAD_PAGE called ###");
+				return resList;
 		    }
 			else {
 				return null;

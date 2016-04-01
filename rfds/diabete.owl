@@ -1,0 +1,41 @@
+<rdf:RDF
+    xmlns:Diabete="http://nidd.com/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xml:base="http://nidd.com/Diabete#">
+		<rdf:Description rdf:ID="Diabetic">
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<Diabete:Name>Diabetic person</Diabete:Name>
+		<Diabete:RoleCreateurConnaissance>Donor of database</Diabete:RoleCreateurConnaissance>
+		<Diabete:CreerPar>Sigillito</Diabete:CreerPar>
+		<Diabete:DateReceived>May 1990</Diabete:DateReceived>
+		<Diabete:Commentaire>The diagnostic, binary-valued variable investigated is whether the patient shows signs of diabetes according to World Health Organization
+       criteria (i.e., if the 2 hour post-load plasma glucose was at least 200 mg/dl at any survey  examination or if found during routine medical care).   The population lives near Phoenix, Arizona, USA. </Diabete:Commentaire>
+		<Diabete:Number_of_times_pregnant>6</Diabete:Number_of_times_pregnant>
+		<Diabete:Plasma_glucose_concentration>148</Diabete:Plasma_glucose_concentration>
+		<Diabete:Diastolic_blood_pressure>72 (mm Hg)</Diabete:Diastolic_blood_pressure> 
+		<Diabete:Triceps_skin_fold_thickness>35mm</Diabete:Triceps_skin_fold_thickness>
+		<Diabete:Two_Hour_serum_insulin>0(mu U/ml)</Diabete:Two_Hour_serum_insulin> 
+		<Diabete:Body_mass_index>33.6 (weight in kg/(height in m)^2)</Diabete:Body_mass_index>
+		<Diabete:Diabetes_pedigree_function>0.627</Diabete:Diabetes_pedigree_function> 
+		<Diabete:Age>50</Diabete:Age>
+	</rdf:Description>
+	<rdf:Description rdf:ID="not_Diabetic">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<Diabete:RoleCreateurConnaissance>Donor of database</Diabete:RoleCreateurConnaissance>
+		<Diabete:Name>non Diabetic person</Diabete:Name>
+		<Diabete:CreerPar>Sigillito</Diabete:CreerPar>
+		<Diabete:DateReceived>May 1990</Diabete:DateReceived>
+		<Diabete:Commentaire>This diagnostic is for non diabetic person</Diabete:Commentaire>
+		<Diabete:Number_of_times_pregnant>5</Diabete:Number_of_times_pregnant>
+		<Diabete:Plasma_glucose_concentration>116</Diabete:Plasma_glucose_concentration>
+		<Diabete:Diastolic_blood_pressure>74 (mm Hg)</Diabete:Diastolic_blood_pressure> 
+		<Diabete:Triceps_skin_fold_thickness>0mm</Diabete:Triceps_skin_fold_thickness>
+		<Diabete:Two_Hour_serum_insulin>0(mu U/ml)</Diabete:Two_Hour_serum_insulin> 
+		<Diabete:Body_mass_index>25.6(weight in kg/(height in m)^2)</Diabete:Body_mass_index>
+		<Diabete:Diabetes_pedigree_function>0.201</Diabete:Diabetes_pedigree_function> 
+		<Diabete:Age>30</Diabete:Age>
+	</rdf:Description>
+</rdf:RDF>
+
+

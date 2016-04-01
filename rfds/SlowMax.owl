@@ -1,0 +1,54 @@
+<rdf:RDF
+xmlns:CyclingOnto="http://KATRAS/AcivitePropriete/CyclingOnto#"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xml:base="http://KATRAS/AcivitePropriete/CyclingOnto#">
+
+<rdf:Description rdf:ID="SlowMax">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+<CyclingOnto:Name>SlowMax</CyclingOnto:Name>
+<CyclingOnto:RoleCreateurConnaissance>Concepteur</CyclingOnto:RoleCreateurConnaissance>
+<CyclingOnto:CreerPar>Vincent</CyclingOnto:CreerPar>
+<CyclingOnto:domaines>
+ <rdf:Bag>
+      <rdf:li>Mechanic</rdf:li>
+      <rdf:li>ergonomie</rdf:li>
+  </rdf:Bag>
+</CyclingOnto:domaines>
+<CyclingOnto:DateDebut>23/10/2006</CyclingOnto:DateDebut>
+<CyclingOnto:DateFin>28/12/2012</CyclingOnto:DateFin>
+<CyclingOnto:Commentaire>The SlowMax  is the worst bike ever !!</CyclingOnto:Commentaire>
+</rdf:Description>
+<rdf:Description rdf:ID="SlowMax_Tri_One">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+<rdfs:subClassOf rdf:resource="#SlowMax"/>
+<CyclingOnto:Name>SlowMax-TriOne</CyclingOnto:Name>
+<CyclingOnto:RoleCreateurConnaissance>Concepteur</CyclingOnto:RoleCreateurConnaissance>
+<CyclingOnto:CreerPar>ILahoud</CyclingOnto:CreerPar>
+<CyclingOnto:DateDebut>08/01/2009</CyclingOnto:DateDebut>
+<CyclingOnto:DateFin>05/01/2012</CyclingOnto:DateFin>
+<CyclingOnto:Commentaire> SlowMax CF 2010 TriOne TEST</CyclingOnto:Commentaire>
+<CyclingOnto:domaines>Mechanic</CyclingOnto:domaines>
+<CyclingOnto:FrameWeight>1.700</CyclingOnto:FrameWeight>
+<CyclingOnto:FramesetLength>XL</CyclingOnto:FramesetLength>
+<CyclingOnto:SeatTubeLength>3600</CyclingOnto:SeatTubeLength>
+<CyclingOnto:TopTubeLength>585</CyclingOnto:TopTubeLength>
+<CyclingOnto:HeadTubeLength>175</CyclingOnto:HeadTubeLength>
+<CyclingOnto:HeadTubeAngle>72</CyclingOnto:HeadTubeAngle>
+<CyclingOnto:SeatTubeAngle>75</CyclingOnto:SeatTubeAngle>
+<CyclingOnto:ChainstayLength>3900</CyclingOnto:ChainstayLength>
+<CyclingOnto:WheelBase>1010</CyclingOnto:WheelBase>
+<CyclingOnto:HandlebarName>Alu X</CyclingOnto:HandlebarName>
+<CyclingOnto:HandlebarWeight>927</CyclingOnto:HandlebarWeight>
+<CyclingOnto:HandlebarMaterial>Aluminuim</CyclingOnto:HandlebarMaterial>
+<CyclingOnto:HandlebarLength>36</CyclingOnto:HandlebarLength>
+<CyclingOnto:WheelName>Zipp 808 AR</CyclingOnto:WheelName>
+<CyclingOnto:WheelWeight>808</CyclingOnto:WheelWeight>
+<CyclingOnto:WheelMaterial>Carbone</CyclingOnto:WheelMaterial>
+<CyclingOnto:WheelSize>26</CyclingOnto:WheelSize>
+<CyclingOnto:cranksetName>Speed-One</CyclingOnto:cranksetName>
+<CyclingOnto:cranksetWeight>112</CyclingOnto:cranksetWeight>
+<CyclingOnto:cranksetMaterial>Alliage Alu-Carbone</CyclingOnto:cranksetMaterial>
+<CyclingOnto:ChainRingTeeth>54</CyclingOnto:ChainRingTeeth>
+</rdf:Description>
+</rdf:RDF>

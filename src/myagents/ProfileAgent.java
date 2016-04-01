@@ -55,10 +55,6 @@ public class ProfileAgent extends Agent implements ProfileVocabulary{
 							if(action instanceof ProfileOperation) {
 								addBehaviour(new HandleProfileOperation(myAgent, msg));
 							}
-							else if(action instanceof FileResult) {
-								System.out.println("FILERESULT GELDIIII");
-								addBehaviour(new HandleFileResult(myAgent, msg));
-							}
 							else replyNotUnderstood(msg);
 							break;
 						case(ACLMessage.INFORM) :
@@ -107,42 +103,6 @@ public class ProfileAgent extends Agent implements ProfileVocabulary{
 		      }
 		   }
 	
-	class HandleFileResult extends OneShotBehaviour {
-		// ------------------------------------------------  Handler for an Profile Operation request
-
-		      private ACLMessage request;
-
-		      HandleFileResult(Agent a, ACLMessage request) {
-
-		         super(a);
-		         this.request = request;
-		      }
-
-		      public void action() {
-
-		         try {
-		            ContentElement content = getContentManager().extractContent(request);
-		            FileResult fr = (FileResult)((Action)content).getAction();
-		            ACLMessage reply = request.createReply();
-		            Object userList = null;
-		            if(fr.getType() == LOAD_USERS) {
-		            	userList = roleExecution.doPageResult(fr.getUrl()); 
-		            }
-		            if (userList == null) {
-		            	replyNotUnderstood(request);
-		            	System.out.println("FILERESULT ANLASILMADI :(");
-		            }
-		            else {
-		               reply.setPerformative(ACLMessage.INFORM);
-		               Result result = new Result((Action)content, userList);
-		               getContentManager().fillContent(reply, result);
-		               send(reply);
-		               System.out.println("\n### ProfileAgent : Operation processed.FILERESULT ###");
-		            }
-		         }
-		         catch(Exception ex) { ex.printStackTrace(); }
-		      }
-		   }
 	void replyNotUnderstood(ACLMessage msg) {
 		// ----------------------------------------- Message is not understood
 

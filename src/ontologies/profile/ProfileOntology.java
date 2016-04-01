@@ -53,11 +53,6 @@ public class ProfileOntology extends Ontology implements ProfileVocabulary{
 			as.add(PROFILE_INFORMATION_TYPE, (PrimitiveSchema) getSchema(BasicOntology.INTEGER),ObjectSchema.MANDATORY);
 			as.add(PROFILE_INFORMATION_USERNAME, (PrimitiveSchema) getSchema(BasicOntology.STRING),ObjectSchema.MANDATORY);
 			
-			//FileResult
-			add(as = new AgentActionSchema(FILE_RESULT), FileResult.class);
-			as.add(FILE_RESULT_TYPE,(PrimitiveSchema) getSchema(BasicOntology.INTEGER),ObjectSchema.MANDATORY);
-			as.add(FILE_RESULT_URL, (PrimitiveSchema) getSchema(BasicOntology.STRING),ObjectSchema.MANDATORY);
-			as.add(FILE_RESULT_USERLIST, (ConceptSchema) getSchema(USER),0,ObjectSchema.UNLIMITED);
 			
 		}
 		catch(Exception e) {

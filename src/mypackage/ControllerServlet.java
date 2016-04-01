@@ -1,6 +1,5 @@
 package mypackage;
 import java.io.IOException;  
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;  
 import javax.servlet.ServletException;  
@@ -10,14 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import jade.core.Profile;
-import jade.core.ProfileImpl;
 import jade.util.leap.Properties;
 import jade.wrapper.ControllerException;
 import jade.wrapper.gateway.*;
-import myagents.*;
 import ontologies.profile.*;
 import ontologies.search.*;
-import organizations.*;
 
 public class ControllerServlet extends HttpServlet implements ProfileVocabulary,SearchVocabulary {  
     /**
@@ -226,19 +222,20 @@ public class ControllerServlet extends HttpServlet implements ProfileVocabulary,
 	        case "clk" :
 	        {
 	        	String urlRedirect = request.getParameter("page");
-	        	FileResult fileRes = new FileResult();
-	        	fileRes.setUrl(urlRedirect);
-	        	fileRes.setType(LOAD_USERS);
+	        	searchOperation = new SearchOperation();
+	        	searchOperation.setUrl(urlRedirect);
+	        	searchOperation.setType(LOAD_PAGE);
 	        	try {
-	        		JadeGateway.execute(fileRes);
+	        		JadeGateway.execute(searchOperation);
 	        	}
 	        	catch(Exception e) {
 	        		e.printStackTrace();
 	        	}
-	        	jade.util.leap.List userList = fileRes.getUserList();
-	        	session.setAttribute("userList", userList);
+	        	jade.util.leap.List myList = searchOperation.getResultList();
+	        	session.setAttribute("contentList", myList);
 	        	RequestDispatcher rd=request.getRequestDispatcher("PageResult.jsp");  
 	            rd.forward(request, response);
+	            searchOperation = null;
 	        	break;
 	        }
 	        default :

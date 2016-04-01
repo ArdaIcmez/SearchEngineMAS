@@ -12,7 +12,6 @@ public interface ProfileVocabulary {
 	public static final int REGISTER_USER = 3;
 	public static final int DELETE_USER = 4;
 	public static final int POPULATE_PROFILE = 5;
-	public static final int LOAD_USERS = 6;
 	public static final String AUTHENT_CORRECT = "Authentication valid";
 	public static final String AUTHENT_INCORRECT = "Authentication unvalid";
 	public static final String PROFILE_MODIFIED = "Profile modified";
@@ -41,11 +40,6 @@ public interface ProfileVocabulary {
 	public static final String PROFILE_INFORMATION = "ProfileInformation";
 	public static final String PROFILE_INFORMATION_TYPE = "type";
 	public static final String PROFILE_INFORMATION_USERNAME = "username";
-	
-	public static final String FILE_RESULT = "FileResult";
-	public static final String FILE_RESULT_TYPE = "type";
-	public static final String FILE_RESULT_URL = "url";
-	public static final String FILE_RESULT_USERLIST = "userList";
 	
 	public static final String PROFILE_PROBLEM = "ProfileProblem";
 	public static final String PROFILE_PROBLEM_NUM = "num";

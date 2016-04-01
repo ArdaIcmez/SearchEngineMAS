@@ -1,0 +1,42 @@
+<rdf:RDF
+    xmlns:IrisPlant="http://nidd.com/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xml:base="http://nidd.com/IrisPlant#">
+		<rdf:Description rdf:ID="Iris_Setosa">
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<IrisPlant:Name>Iris Setosa</IrisPlant:Name>
+		<IrisPlant:RoleCreateurConnaissance>Creator</IrisPlant:RoleCreateurConnaissance>
+		<IrisPlant:CreerPar>R.A. Fisher</IrisPlant:CreerPar>
+		<IrisPlant:Date>July 1988</IrisPlant:Date>
+		<IrisPlant:sepallength>4.9</IrisPlant:sepallength>
+		<IrisPlant:sepalwidth>3.0</IrisPlant:sepalwidth>
+		<IrisPlant:petallength>1.4</IrisPlant:petallength> 
+		<IrisPlant:petalwidth>0.2</IrisPlant:petalwidth>
+	</rdf:Description>
+	<rdf:Description rdf:ID="Iris_Versicolour">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<IrisPlant:Name>Iris Versicolour</IrisPlant:Name>
+		<IrisPlant:RoleCreateurConnaissance>Creator</IrisPlant:RoleCreateurConnaissance>
+		<IrisPlant:CreerPar>R.A. Fisher</IrisPlant:CreerPar>
+		<IrisPlant:Date>July 1988</IrisPlant:Date>
+		<IrisPlant:Commentaire>This define attributes value of iris Versicolour</IrisPlant:Commentaire>
+		<IrisPlant:sepallength>6.3</IrisPlant:sepallength>
+		<IrisPlant:sepalwidth>2.5</IrisPlant:sepalwidth>
+		<IrisPlant:petallength>4.9</IrisPlant:petallength> 
+		<IrisPlant:petalwidth>1.5</IrisPlant:petalwidth>
+	</rdf:Description>
+	<rdf:Description rdf:ID="Iris_Virginica">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<IrisPlant:Name>Iris Virginica</IrisPlant:Name>
+		<IrisPlant:RoleCreateurConnaissance>Creator</IrisPlant:RoleCreateurConnaissance>
+		<IrisPlant:CreerPar>R.A. Fisher</IrisPlant:CreerPar>
+		<IrisPlant:Date>July 1988</IrisPlant:Date>
+		<IrisPlant:sepallength>7.7</IrisPlant:sepallength>
+		<IrisPlant:sepalwidth>3.0</IrisPlant:sepalwidth>
+		<IrisPlant:petallength>6.1</IrisPlant:petallength> 
+		<IrisPlant:petalwidth>2.3</IrisPlant:petalwidth>
+	</rdf:Description>
+</rdf:RDF>
+
+

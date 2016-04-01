@@ -1,0 +1,69 @@
+<rdf:RDF
+    xmlns:Velo="http://KATRAS/AcivitePropriete/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xml:base="http://utbm.acsp.fr/Velo#">
+		<rdf:Description rdf:ID="Velo_X-Race">
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<Velo:Name>X-race</Velo:Name>
+		<Velo:RoleCreateurConnaissance>Concepteur</Velo:RoleCreateurConnaissance>
+		<Velo:CreerPar>ILahoud</Velo:CreerPar>
+		<Velo:DateDebut>16/09/2011</Velo:DateDebut>
+		<Velo:DateFin>02/10/2011</Velo:DateFin>
+		<Velo:Commentaire> X-Race 2010 </Velo:Commentaire>
+		<Velo:FrameWeight>4.500</Velo:FrameWeight>
+		<Velo:SeatTubeLength>140</Velo:SeatTubeLength>
+		<Velo:TopTubeLength>135</Velo:TopTubeLength> 
+		<Velo:HeadTubeLength>125</Velo:HeadTubeLength>
+		<Velo:HeadTubeAngle>67</Velo:HeadTubeAngle> 
+		<Velo:SeatTubeAngle>77</Velo:SeatTubeAngle>
+		<Velo:ChainstayLength>365</Velo:ChainstayLength> 
+		<Velo:WheelBase>749</Velo:WheelBase>
+		<Velo:HandlebarName>Alu X</Velo:HandlebarName>
+		<Velo:HandlebarWeight>927</Velo:HandlebarWeight> 
+		<Velo:HandlebarMaterial>Aluminium</Velo:HandlebarMaterial>
+		<Velo:HandlebarLength>38</Velo:HandlebarLength>
+		<Velo:WheelName>Zipp 808 AV</Velo:WheelName>
+		<Velo:WheelWeight>691</Velo:WheelWeight>
+		<Velo:WheelMaterial>Carbone</Velo:WheelMaterial>
+		<Velo:WheelSize>26</Velo:WheelSize>
+		<Velo:cranksetName>OSymetric</Velo:cranksetName>
+		<Velo:cranksetWeight>122</Velo:cranksetWeight>
+		<Velo:cranksetMaterial>Aluminium</Velo:cranksetMaterial>
+		<Velo:ChainRingTeeth>60</Velo:ChainRingTeeth>
+	</rdf:Description>
+	<rdf:Description rdf:ID="Velo_X-Race2010-M">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="#Velo_X-Race"/>
+		<Velo:Name>X-race</Velo:Name>
+		<Velo:RoleCreateurConnaissance>Concepteur</Velo:RoleCreateurConnaissance>
+		<Velo:CreerPar>ILahoud</Velo:CreerPar>
+		<Velo:DateDebut>16/09/2011</Velo:DateDebut>
+		<Velo:DateFin>02/10/2011</Velo:DateFin>
+		<Velo:Commentaire> X-Race 2010 </Velo:Commentaire>
+		<Velo:FrameWeight>3.500</Velo:FrameWeight>
+		<Velo:FramesetLength>M</Velo:FramesetLength>
+		<Velo:SeatTubeLength>126</Velo:SeatTubeLength>
+		<Velo:TopTubeLength>133</Velo:TopTubeLength> 
+		<Velo:HeadTubeLength>121</Velo:HeadTubeLength>
+		<Velo:HeadTubeAngle>65</Velo:HeadTubeAngle> 
+		<Velo:SeatTubeAngle>75</Velo:SeatTubeAngle>
+		<Velo:ChainstayLength>350</Velo:ChainstayLength> 
+		<Velo:WheelBase>749</Velo:WheelBase>
+		<Velo:HandlebarName>Alu X</Velo:HandlebarName>
+		<Velo:HandlebarWeight>927</Velo:HandlebarWeight> 
+		<Velo:HandlebarMaterial>Aluminium</Velo:HandlebarMaterial>
+		<Velo:HandlebarLength>36</Velo:HandlebarLength>
+		<Velo:WheelName>Zipp 808 AV</Velo:WheelName>
+		<Velo:WheelWeight>691</Velo:WheelWeight>
+		<Velo:WheelMaterial>Carbone</Velo:WheelMaterial>
+		<Velo:WheelSize>26</Velo:WheelSize>
+		<Velo:cranksetName>OSymetric</Velo:cranksetName>
+		<Velo:cranksetWeight>122</Velo:cranksetWeight>
+		<Velo:cranksetMaterial>Aluminium</Velo:cranksetMaterial>
+		<Velo:ChainRingTeeth>54</Velo:ChainRingTeeth>
+	</rdf:Description>
+	
+</rdf:RDF>
+
+

@@ -7,13 +7,10 @@ import jade.content.onto.*;
 import jade.content.onto.basic.Action;
 import jade.content.onto.basic.Result;
 import jade.core.AID;
-import jade.core.AgentContainer;
 import jade.core.behaviours.*;
 import jade.domain.AMSService;
 import jade.domain.FIPAAgentManagement.*;
 import jade.lang.acl.ACLMessage;
-import jade.lang.acl.UnreadableException;
-import jade.wrapper.AgentController;
 import jade.wrapper.gateway.*;
 
 import ontologies.profile.*;
@@ -30,7 +27,6 @@ public class MyGatewayAgent extends GatewayAgent {
 	AMSAgentDescription [] agents =null;
 	ProfileOperation profOperation;
 	SearchOperation searchOperation;
-	FileResult resultOperation;
 	protected void processCommand(Object obj) {
 		
 		System.out.println("\n### GatewayAgent : Got "+obj.getClass()+" from servlet. ###");
@@ -51,26 +47,6 @@ public class MyGatewayAgent extends GatewayAgent {
 				if(recAgents.getName().equals(this.getAID())==false) {
 					try {
 						getContentManager().fillContent(msg, new Action(recAgents.getName(),this.profOperation));
-						msg.addReceiver(recAgents.getName());
-					} catch ( CodecException | OntologyException e) {
-						e.printStackTrace();
-					}
-				}
-			}
-            send(msg);
-		}
-		
-		else if(obj instanceof FileResult) {	
-			this.resultOperation = (FileResult) obj;
-			
-			ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
-			msg.setLanguage(codec.getName());
-			msg.setOntology(profileOntology.getName());
-			
-			for (AMSAgentDescription recAgents : agents) {
-				if(recAgents.getName().equals(this.getAID())==false) {
-					try {
-						getContentManager().fillContent(msg, new Action(recAgents.getName(),this.resultOperation));
 						msg.addReceiver(recAgents.getName());
 					} catch ( CodecException | OntologyException e) {
 						e.printStackTrace();
@@ -157,8 +133,8 @@ public class MyGatewayAgent extends GatewayAgent {
     								releaseCommand(searchOperation);
     							}
     							else if(result.getValue() instanceof jade.util.leap.List) {
-    								resultOperation.setUserList((jade.util.leap.List)result.getValue());
-    								releaseCommand(resultOperation);
+    								searchOperation.setResultList((jade.util.leap.List)result.getValue());
+    								releaseCommand(searchOperation);
     							}
     							System.out.println("### GatewayAgent : "+result.getClass()+" released. ###");
     						}

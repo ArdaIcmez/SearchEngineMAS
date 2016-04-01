@@ -16,29 +16,39 @@
     <User:Name>Kalaasd</User:Name>
     <User:Interests>and</User:Interests>
     <User:BrowseHistory>www.google.comasd</User:BrowseHistory>
+    <User:BrowseHistory>asd</User:BrowseHistory>
     <User:Role>Studentasd</User:Role>
     <User:BrowseHistory>www.google.fr</User:BrowseHistory>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.aicmez.com/user/#Lkl">
-    <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
-    <User:Username>Lkl</User:Username>
     <User:Password>123</User:Password>
+    <User:Username>Lkl</User:Username>
+    <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.aicmez.com/user/#Quep">
-    <User:BrowseHistory></User:BrowseHistory>
+    <User:BrowseHistory>we</User:BrowseHistory>
     <User:Name>Arda</User:Name>
-    <User:Interests>KAla</User:Interests>
     <User:Role>asd</User:Role>
+    <User:Interests>asd</User:Interests>
+    <User:Interests>KAla</User:Interests>
+    <User:BrowseHistory>asd</User:BrowseHistory>
+    <User:BrowseHistory>kalamar</User:BrowseHistory>
     <User:Job>kalamar</User:Job>
+    <User:BrowseHistory>Kalamar</User:BrowseHistory>
     <User:Role></User:Role>
     <User:Password>12</User:Password>
     <User:Surname>kalamari</User:Surname>
+    <User:BrowseHistory>Marti</User:BrowseHistory>
     <User:Surname>asd</User:Surname>
     <User:Interests>Marlar</User:Interests>
     <User:Role>Student</User:Role>
     <User:Job>Computer Engineer</User:Job>
+    <User:BrowseHistory>KAlamar</User:BrowseHistory>
+    <User:BrowseHistory>Quep</User:BrowseHistory>
     <User:Surname>Icmez</User:Surname>
     <User:Username>Quep</User:Username>
+    <User:BrowseHistory>arda</User:BrowseHistory>
+    <User:BrowseHistory>re</User:BrowseHistory>
     <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.aicmez.com/user/#Paoli">
@@ -67,8 +77,8 @@
     <User:Username>Muep</User:Username>
     <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
     <User:BrowseHistory>www.m21.com</User:BrowseHistory>
-    <User:Surname>Micmez</User:Surname>
     <User:Job>Computer Mengineer</User:Job>
+    <User:Surname>Micmez</User:Surname>
     <User:ProfileId>00002</User:ProfileId>
     <User:Role>Student</User:Role>
   </rdf:Description>
@@ -84,12 +94,12 @@
     <User:Username>Mertcan</User:Username>
     <User:BrowseHistory>www.stackoverflow.com</User:BrowseHistory>
     <User:Surname>Madenci</User:Surname>
-    <User:BrowseHistory>www.linkedin.com</User:BrowseHistory>
     <User:Job>Industrial Engineer</User:Job>
+    <User:BrowseHistory>www.linkedin.com</User:BrowseHistory>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.aicmez.com/user/#Metin">
-    <User:Password>123</User:Password>
-    <User:Username>Metin</User:Username>
     <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
+    <User:Username>Metin</User:Username>
+    <User:Password>123</User:Password>
   </rdf:Description>
 </rdf:RDF>

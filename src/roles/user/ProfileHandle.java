@@ -3,8 +3,7 @@ package roles.user;
 import java.io.ByteArrayInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 import org.apache.jena.iri.impl.Main;
 import org.apache.jena.query.Query;
@@ -110,7 +109,7 @@ public class ProfileHandle extends UserOrganization{
 				"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
 				"PREFIX User: <http://www.aicmez.com/user/#> " +
 				"SELECT * WHERE { " +
-				" User:"+user.getNickname()+" ?predicate ?x ."+
+				" User:"+user.getNickname()+" ?predicate ?x ."+ // Genel olması lazım
 				"}"; 
 		Model model = null;
 		if (link != "")
@@ -357,43 +356,7 @@ public class ProfileHandle extends UserOrganization{
 		this.doUpdateRDF(oldModel, editQuery);
 	}
 	
-	public jade.util.leap.List doPageResult(String url)
-	{
-		jade.util.leap.List tempList = new jade.util.leap.ArrayList();
-		jade.util.leap.List resultList = new jade.util.leap.ArrayList();
-		String myLink = "/home/arda/workspace/SearchEngine/rfds/"+url;
-		Model model = FileManager.get().loadModel(myLink);
-		String getNicknames = ""+
-        		"PREFIX User: <http://www.aicmez.com/user/#> \n" +
-        		"SELECT ?x WHERE { " +
-				"?s User:Username ?x ." +
-				"}"; 
-		Query query = QueryFactory.create(getNicknames);
-		QueryExecution qexec = QueryExecutionFactory.create(query,model);
-		try {
-			ResultSet results = qexec.execSelect();
-			while (results.hasNext()) {
-				QuerySolution soln = results.nextSolution();
-				RDFNode obj = soln.get("x");
-				if ( obj.isLiteral() )  {
-					((Literal)obj).getLexicalForm() ;
-				}
-				UserBean usr = new UserBean();
-				usr.setNickname(obj.toString());
-				tempList.add(usr);
-			}
-		} finally {
-			qexec.close();
-		}
-		Iterator iter = tempList.iterator();
-		while(iter.hasNext()) {
-			UserBean user = (UserBean)iter.next();
-			user = this.doPopulate(user,myLink);
-			resultList.add(user);
-		}
-		return resultList;
-	}
-	
+
 	public void doUpdateRDF(Model oldModel, String editQuery)
 	{
 		UpdateAction.parseExecute(editQuery,oldModel);
