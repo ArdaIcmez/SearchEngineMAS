@@ -1,0 +1,510 @@
+<?xml version="1.0"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:sioc="http://rdfs.org/sioc/ns#"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:admin="http://webns.net/mvcb/"
+   xmlns:rss="http://purl.org/rss/1.0/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:content="http://purl.org/rss/1.0/modules/content/"
+   xml:base="http://www.talkdigger.com/conversations/www.glasgowprestwickairportcarhire.co.uk">
+
+   <foaf:Document rdf:about="">
+   	<dc:title>SIOC document for the conversation 'Glasgow Prestwick Airport Car Hire  ' tracked by Talk Digger.</dc:title>
+   	<dc:description>A SIOC document describes the structure and contents of a conversation (e.g., conversation page on Talk Digger) in a machine processable form. For more information refer to the &lt;a href=&quot;http://sioc-project.com&quot;&gt;SIOC project page&lt;/a&gt;</dc:description>
+   	<foaf:primaryTopic rdf:resource="http://www.talkdigger.com"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <sioc:Site rdf:about="http://www.talkdigger.com">
+     <dc:title>Talk Digger</dc:title>
+     <dc:description>Talk Digger is about Web Conversations - It is the best way to find, follow and enter conversations of the Web</dc:description>
+     <sioc:host_of rdf:resource="#conversation"/>
+     <sioc:has_usergroup rdf:resource="#usergroup"/>
+     <sioc:link rdf:resource="http://www.talkdigger.com"/>
+   </sioc:Site>
+
+   <sioc:Forum rdf:about="#conversation">
+     <rdf:type rdf:resource="http://rdfs.org/sioc/types#ArgumentativeDiscussion" />
+     <dc:title>Glasgow Prestwick Airport Car Hire  </dc:title>
+     <dc:description>No Description available</dc:description>
+     <sioc:link rdf:resource="http://www.talkdigger.com/conversations/www.glasgowprestwickairportcarhire.co.uk"/>
+     <sioc:topic rdfs:label="car" rdf:resource="http://search.dmoz.org/cgi-bin/search?search=car"/>
+     <sioc:topic rdfs:label="hire" rdf:resource="http://search.dmoz.org/cgi-bin/search?search=hire"/>
+     <sioc:topic rdfs:label="holidays" rdf:resource="http://search.dmoz.org/cgi-bin/search?search=holidays"/>
+     <sioc:has_host rdf:resource="http://www.talkdigger.com" />
+     <sioc:parent_of rdf:resource="http://www.talkdigger.com/conversations/www.glasgowprestwickairportcarhire.co.uk#conversation" />
+     <sioc:has_parent rdf:resource="http://www.talkdigger.com/conversations/www.glasgowprestwickairportcarhire.co.uk#conversation" />
+     <sioc:has_subscriber rdf:resource="http://www.talkdigger.com/users/witredereter" />
+   </sioc:Forum>
+
+   <sioc:Usergroup rdf:about="#usergroup">
+     <dc:title>Glasgow Prestwick Airport Car Hire  </dc:title>
+     <dc:description>No Description available</dc:description>
+     <sioc:usergroup_of rdf:resource="http://www.talkdigger.com" />
+     <sioc:has_member rdf:resource="http://www.talkdigger.com/users/witredereter" />
+     <sioc:link rdf:resource="http://www.talkdigger.com/conversations/www.glasgowprestwickairportcarhire.co.uk"/>
+   </sioc:Usergroup>
+
+   <sioc:User rdf:about="http://www.talkdigger.com/users/witredereter">
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.hungryflix.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/blog.hungryflix.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.genialgames.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.actionprintinginc.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.uk-cottage-rental.co.uk#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.uschallengecoins.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.articleum.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/ljsearch.org#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/google.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/codavr.ru#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.agentix.org#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.aginstaller.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.lancoba.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.abaculus.net#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.triporiginator.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/arrangeyourvacation.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.athand24.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.meweddingnetwork.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.achoteldeals.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.apply-for-a-credit-card-now.com/resource/9965309/juniper-credit-card-review.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/conceal.ws#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.indiabroadband.net#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.windowsvistaplace.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.bestreflex.net#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.diabeticseniors.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.e-investing.in/showthread.php?t=626#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.e-investing.in/showthread.php?t=583#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.dnareplication.info#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.rihanna.ws#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.rakimy-keny.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.csimiami.info#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.genetic-diseases.net#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.arenacalculator.net#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.zeldaforums.net#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.lookherbal.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.pharmacyxr.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.weightandloss.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.thinkhgh.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.mangosteencreator.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.gadgets4nowt.co.uk#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.buytramadolonline.ws#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/myrecipesblog.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.buyyourcar.co.uk/New-Car.aspx#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.buyyourcar.co.uk/loans.aspx#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.buyyourcar.co.uk/Used-Cars.aspx.aspx#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/animecharm.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.pcindanger.com/virusray-removal.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.scoobytuner.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.discountfloridacarrentals.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/trueimprint.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.padoko.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.buyyourcar.co.uk/Contract-Hire.aspx#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.buyyourcar.co.uk/car-insurance.aspx#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.carshowsvideos.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.myspacecodeto.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.fastgasprices.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestbudgethosting.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestbloghosting.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestforumhosting.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestunixhosting.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestwindowshosting.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestphphosting.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestemailhosting.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestecommercehosting.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestvpshosting.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.linksdirec.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.linksdirec.com/sitemap.php#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.gii.in/resumes#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.gii.in/wallpapers#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.gii.in/gadgets#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.probargains.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.acidreflux.webauthority.info#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.sonicice.net#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.mechalift.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.indiana-nursing-schools.com/nursing-schools.php#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.board-of-nursing.com/texas-board-of-nursing.php#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.datingsitefree4all.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.jewelrymall.com/ring/diamond-engagement-rings.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/blog.jewelrymall.com/tips-on-how-to-never-loose-your-earrings.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.travellers-warehouse.com/blog/staying-well-on-the-road.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.freemailguide.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.e-card.gen.tr#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.lyricsdatabase.gen.tr#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.cheatcodesplanet.net#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.funnyjokescenter.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.allrecipesworld.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.search.web.tr#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.funny.web.tr#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.pr.web.tr#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.anonymbox.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.ratefreestuff.com/free/coupons#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.mauritiusorchid.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.prweb.com/releases/airtel-broadband/reliance-wimax/prweb564455.htm#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.tutoring-services.org#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.essayfraud.org/forum/Ban-Term-Paper-Mills-Social-Bookmarking-Sites-t587.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.buymagsonline.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.buyyourcar.co.uk/Spec/Jaguar/S-Type/Code/USDJAB927HE10618326.aspx#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.resellrightsprofessional.com/sp/yc/youcanrights.htm#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.twimbee.com/cat-117-103/Parallels_Desktop_for_Mac-5291.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/ezinearticles.com/?AVS-Video-Tools-Review---Convert-Video-and-DVD-With-AVS-Video-Tools-Software-Bundle&amp;id=763809#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/ezinearticles.com/?Spotmau-PowerSuite-2007-Review&amp;id=745096#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.webanalyticsfaq.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.fengshuioffice.info#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.marateahotels.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.faithitup.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.headrebel.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.betsfreebets.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.apuestasgratisporinternet.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.unmasked-subliminals.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/hubpages.com/hub/Copy_PS2_Games_Free#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/freepspgamedownloads.sampasite.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.marmaris.org.uk#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.wakulla.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.pcindanger.com/contravirus-removal.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.animestream.info#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.isteroids.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.twimbee.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.proactolproductreview.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.englisch4business.de#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/ezinearticles.com/?MOVAVI-Videosuite-Review---All-You-Will-Ever-Need-For-Digital-Video&amp;id=792803#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/ezinearticles.com/?Max-Secure-Registry-Cleaner-Review---How-to-Keep-Your-Windows-PC-Lean-and-Mean&amp;id=792798#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/ezinearticles.com/?PQ-DVD-to-iPod-Review---Convert-DVDs-to-iPod-Touch-Movies&amp;id=807519#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/ezinearticles.com/?Dvd-Next-Copy-Review---The-Pain-Free-Way-to-Copy-DVDs&amp;id=790061#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.squidoo.com/instantarticlewizard#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.avatardeals.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.e-investing.in/showthread.php?t=675#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.e-investing.in/showthread.php?t=717#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.squidoo.com/affiliateelitereviews#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.animemovie.us#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.watch-sports-online.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.free-movie-trailers.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.mtv-music-videos.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.topsiteoftheday.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.aceshrinkwrap.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/perthbeautysalon.weebly.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.icanmakeyouthin.co.uk#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/doesextagenwork.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.tvonpc-free.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.pcindanger.com/iedefender-removal.html#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.defencetalk.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.sinodefenceforum.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.auto-talk.net#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.worldaffairstalk.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.governmentgrantsfree.net#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.poolsaboveground.com#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.tvchefs.net#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.quodus.org#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.tourismhamilton.info#usergroup" />
+     <sioc:member_of rdf:resource="http://www.talkdigger.com/conversations/www.moodlezine.com#usergroup" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.hungryflix.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/blog.hungryflix.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.genialgames.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.actionprintinginc.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.uk-cottage-rental.co.uk#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.uschallengecoins.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.articleum.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/ljsearch.org#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/google.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/codavr.ru#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.agentix.org#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.aginstaller.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.lancoba.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.abaculus.net#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.triporiginator.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/arrangeyourvacation.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.athand24.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.meweddingnetwork.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.achoteldeals.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.apply-for-a-credit-card-now.com/resource/9965309/juniper-credit-card-review.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/conceal.ws#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.indiabroadband.net#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.windowsvistaplace.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.bestreflex.net#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.diabeticseniors.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.e-investing.in/showthread.php?t=626#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.e-investing.in/showthread.php?t=583#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.dnareplication.info#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.rihanna.ws#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.rakimy-keny.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.csimiami.info#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.genetic-diseases.net#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.arenacalculator.net#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.zeldaforums.net#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.lookherbal.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.pharmacyxr.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.weightandloss.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.thinkhgh.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.mangosteencreator.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.gadgets4nowt.co.uk#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.buytramadolonline.ws#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/myrecipesblog.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.buyyourcar.co.uk/New-Car.aspx#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.buyyourcar.co.uk/loans.aspx#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.buyyourcar.co.uk/Used-Cars.aspx.aspx#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/animecharm.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.pcindanger.com/virusray-removal.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.scoobytuner.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.discountfloridacarrentals.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/trueimprint.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.padoko.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.buyyourcar.co.uk/Contract-Hire.aspx#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.buyyourcar.co.uk/car-insurance.aspx#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.carshowsvideos.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.myspacecodeto.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.fastgasprices.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestbudgethosting.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestbloghosting.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestforumhosting.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestunixhosting.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestwindowshosting.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestphphosting.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestemailhosting.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestecommercehosting.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.webhostinggeeks.com/bestvpshosting.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.linksdirec.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.linksdirec.com/sitemap.php#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.gii.in/resumes#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.gii.in/wallpapers#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.gii.in/gadgets#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.probargains.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.acidreflux.webauthority.info#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.sonicice.net#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.mechalift.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.indiana-nursing-schools.com/nursing-schools.php#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.board-of-nursing.com/texas-board-of-nursing.php#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.datingsitefree4all.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.jewelrymall.com/ring/diamond-engagement-rings.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/blog.jewelrymall.com/tips-on-how-to-never-loose-your-earrings.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.travellers-warehouse.com/blog/staying-well-on-the-road.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.freemailguide.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.e-card.gen.tr#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.lyricsdatabase.gen.tr#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.cheatcodesplanet.net#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.funnyjokescenter.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.allrecipesworld.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.search.web.tr#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.funny.web.tr#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.pr.web.tr#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.anonymbox.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.ratefreestuff.com/free/coupons#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.mauritiusorchid.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.prweb.com/releases/airtel-broadband/reliance-wimax/prweb564455.htm#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.tutoring-services.org#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.essayfraud.org/forum/Ban-Term-Paper-Mills-Social-Bookmarking-Sites-t587.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.buymagsonline.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.buyyourcar.co.uk/Spec/Jaguar/S-Type/Code/USDJAB927HE10618326.aspx#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.resellrightsprofessional.com/sp/yc/youcanrights.htm#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.twimbee.com/cat-117-103/Parallels_Desktop_for_Mac-5291.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/ezinearticles.com/?AVS-Video-Tools-Review---Convert-Video-and-DVD-With-AVS-Video-Tools-Software-Bundle&amp;id=763809#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/ezinearticles.com/?Spotmau-PowerSuite-2007-Review&amp;id=745096#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.webanalyticsfaq.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.fengshuioffice.info#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.marateahotels.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.faithitup.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.headrebel.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.betsfreebets.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.apuestasgratisporinternet.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.unmasked-subliminals.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/hubpages.com/hub/Copy_PS2_Games_Free#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/freepspgamedownloads.sampasite.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.marmaris.org.uk#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.wakulla.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.pcindanger.com/contravirus-removal.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.animestream.info#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.isteroids.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.twimbee.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.proactolproductreview.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.englisch4business.de#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/ezinearticles.com/?MOVAVI-Videosuite-Review---All-You-Will-Ever-Need-For-Digital-Video&amp;id=792803#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/ezinearticles.com/?Max-Secure-Registry-Cleaner-Review---How-to-Keep-Your-Windows-PC-Lean-and-Mean&amp;id=792798#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/ezinearticles.com/?PQ-DVD-to-iPod-Review---Convert-DVDs-to-iPod-Touch-Movies&amp;id=807519#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/ezinearticles.com/?Dvd-Next-Copy-Review---The-Pain-Free-Way-to-Copy-DVDs&amp;id=790061#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.squidoo.com/instantarticlewizard#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.avatardeals.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.e-investing.in/showthread.php?t=675#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.e-investing.in/showthread.php?t=717#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.squidoo.com/affiliateelitereviews#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.animemovie.us#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.watch-sports-online.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.free-movie-trailers.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.mtv-music-videos.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.topsiteoftheday.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.aceshrinkwrap.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/perthbeautysalon.weebly.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.icanmakeyouthin.co.uk#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/doesextagenwork.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.tvonpc-free.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.pcindanger.com/iedefender-removal.html#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.defencetalk.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.sinodefenceforum.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.auto-talk.net#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.worldaffairstalk.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.governmentgrantsfree.net#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.poolsaboveground.com#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.tvchefs.net#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.quodus.org#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.tourismhamilton.info#conversation" />
+     <sioc:subscriber_of rdf:resource="http://www.talkdigger.com/conversations/www.moodlezine.com#conversation" />
+     <dcterms:created>2007-09-25</dcterms:created>
+     <sioc:account_of rdf:resource="http://www.talkdigger.com/foaf/witredereter" />
+   </sioc:User>
+
+   <foaf:Document rdf:about="http://blog.hashei.com/Midnightidentity/2008/03/09/prestwick-airport-car-hire">
+   	<dc:title>Prestwick Airport Car hire</dc:title>
+   	<dc:description></dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://blog.od3n.net/earthvexingstatute/2008/03/10/prestwick-airport-car-hire">
+   	<dc:title>Prestwick Airport Car hire</dc:title>
+   	<dc:description></dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://blog.od3n.net/onioneyedprofessor/2008/03/10/prestwick-airport-car-hire">
+   	<dc:title>Prestwick Airport Car hire</dc:title>
+   	<dc:description></dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://blog.tla.org.tw/vulgarhydrogen/2008/03/10/prestwick-airport-car-hire">
+   	<dc:title>Prestwick Airport Car hire</dc:title>
+   	<dc:description>Glasgow Prestwick Airport Car Hire. With 11784 Car Hire locations around to world to pick from and integration with 428 global car hire suppliers, we are by far the most comprehensive car hire search engine. We have the lowest car hire ...</dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://brutishhardship.a2z-central.com/2008/03/09/prestwick-airport-car-hire">
+   	<dc:title>Prestwick Airport Car hire</dc:title>
+   	<dc:description></dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://earthvexingslip.iblogget.com/2008/03/09/prestwick-airport-car-hire">
+   	<dc:title>Prestwick Airport Car hire</dc:title>
+   	<dc:description></dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://earthvexingspot.th3blogs.com/2008/03/09/prestwick-airport-car-hire">
+   	<dc:title>Prestwick Airport Car hire</dc:title>
+   	<dc:description></dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://erraticdatabase.th3blogs.com/2008/03/09/prestwick-airport-car-hire">
+   	<dc:title>Prestwick Airport Car hire</dc:title>
+   	<dc:description></dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://erraticrobbery.iblogget.com/2008/03/09/prestwick-airport-car-hire">
+   	<dc:title>Prestwick Airport Car hire</dc:title>
+   	<dc:description></dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://friendlytourist.nicholsblog.com">
+   	<dc:title>Major Ralph Peters US Military</dc:title>
+   	<dc:description>Ray, Renny, Edge and Noura have known each other for some time now. The four encountered each others creative differences in the club scenes of ...</dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://hedgebornasset.espaceblogue.com/2008/03/09/prestwick-airport-car-hire">
+   	<dc:title>Prestwick Airport Car hire</dc:title>
+   	<dc:description></dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://opecopo.org/profoundopening/2008/03/10/prestwick-airport-car-hire">
+   	<dc:title>Prestwick Airport Car hire</dc:title>
+   	<dc:description></dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://plumepluckedabolition.a2z-central.com/2008/03/09/prestwick-airport-car-hire">
+   	<dc:title>Prestwick Airport Car hire</dc:title>
+   	<dc:description></dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://queer.org.au/annoyingtheme/2008/03/09/prestwick-airport-car-hire">
+   	<dc:title>Prestwick Airport Car hire</dc:title>
+   	<dc:description></dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://queer.org.au/errantsketch/2008/03/09/prestwick-airport-car-hire">
+   	<dc:title>Prestwick Airport Car hire</dc:title>
+   	<dc:description></dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://villainoustranscription.espaceblogue.com/2008/03/09/prestwick-airport-car-hire">
+   	<dc:title>Prestwick Airport Car hire</dc:title>
+   	<dc:description></dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://www.boydofayrshire.com">
+   	<dc:title>Boyd of Ayrshire, SEO, Marketing, Business and News</dc:title>
+   	<dc:description>My Blog about Testing Search Engine Optimisation Techniques while living in Ayrshire and looking at marketing done by local companies.</dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://www.boydofayrshire.com/seo/seo-scotland-its-a-growing-communtiy">
+   	<dc:title>SEO Scotland, It's a growing communtiy | boyd of ayrshire .com</dc:title>
+   	<dc:description>I've been back in Scotland (Ayrshire) for slightly over a year now and I must say that when I arrived back I never expected there ...</dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://www.browseayrshire.com">
+   	<dc:title>Ayrshire Hotels, Restaurants, Pubs and Clubs: Browse Ayrshire</dc:title>
+   	<dc:description>Thinking of visiting Ayrshire to enjoy the world famous golf courses then be sure to use Browse Ayshire to get the most out of your stay</dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://www.browseayrshire.com/attractions/ayr-race-course-grand-national-fever">
+   	<dc:title>Ayr Race Course: Grand National Fever | Browse Ayrshire</dc:title>
+   	<dc:description>A known date in the diary this year for all race fans is the 18th and 19th April, ... But for those of us that don't pen that date in our calender maybe it's ...</dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://www.glasgowprestwickairportcarhire.co.uk">
+   	<dc:title>Glasgow Prestwick Airport Car Hire</dc:title>
+   	<dc:description>With 11,784 Car Hire locations around to world to pick from and integration with ... We have the lowest car hire prices in the market for almost half our locations ...</dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+   <foaf:Document rdf:about="http://www.glasgowprestwickairportcarhire.co.uk/feed">
+   	<dc:title>www.glasgowprestwickairportcarhire.co.uk/feed</dc:title>
+   	<dc:description>but you'll have to wait 10 years - Glasgow Evening Times ... Ryanair adds Cork flights from East Midlands and Prestwick - Flightmapping (press release) ...</dc:description>
+   	<sioc:links_to rdf:resource="http://www.glasgowprestwickairportcarhire.co.uk"/>
+   	<admin:generatorAgent rdf:resource="http://www.talkdigger.com"/>
+   </foaf:Document>	
+
+</rdf:RDF>

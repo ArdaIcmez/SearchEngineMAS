@@ -1,0 +1,46 @@
+<rdf:RDF
+    xmlns:HousePets="http://aicmez.com/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xml:base="http://aicmez.com/HousePets#">
+		<rdf:Description rdf:ID="Dogs">
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<HousePets:Name>Basenji</HousePets:Name>
+		<HousePets:Name>Basque Ratter</HousePets:Name>
+		<HousePets:Name>Beagle</HousePets:Name>
+		<HousePets:Name>Berner Laufhund</HousePets:Name>
+		<HousePets:Name>Blackmouth Cur</HousePets:Name>
+		<HousePets:Name>Boerboel</HousePets:Name>
+		<HousePets:Name>Brazilian Terrier</HousePets:Name>
+		<HousePets:Name>Bull Terrier</HousePets:Name>
+		<HousePets:Name>Cane Corso</HousePets:Name>
+		<HousePets:Name>Catahoula Cur</HousePets:Name>
+		<HousePets:Name>Chesapeake Bay Retriever</HousePets:Name>
+		<HousePets:Name>Golden Retriever</HousePets:Name>
+		<HousePets:CreerPar>A. Icmez</HousePets:CreerPar>
+		<HousePets:Date>July 1988</HousePets:Date>
+		<HousePets:Type>Dogs dogs dog</HousePets:Type>
+		<HousePets:Location>ground and house</HousePets:Location>
+	</rdf:Description>
+	<rdf:Description rdf:ID="Cats">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<HousePets:Name>Abyssinian</HousePets:Name>
+		<HousePets:Name>American Bobtail</HousePets:Name>
+		<HousePets:Name>American Wirehair</HousePets:Name>
+		<HousePets:Name>Bombay</HousePets:Name>
+		<HousePets:Name>British Longhair</HousePets:Name>
+		<HousePets:Name>Boerboel</HousePets:Name>
+		<HousePets:Name>California Spangled</HousePets:Name>
+		<HousePets:Name>Chausie</HousePets:Name>
+		<HousePets:Name>Chartreux</HousePets:Name>
+		<HousePets:Name>Devon Rex</HousePets:Name>
+		<HousePets:Name>Havana Brown</HousePets:Name>
+		<HousePets:Name>Khao Manee</HousePets:Name>
+		<HousePets:CreerPar>A. Icmez</HousePets:CreerPar>
+		<HousePets:Type>Cats cats cat</HousePets:Type>
+		<HousePets:Date>July 1988</HousePets:Date>
+		<HousePets:Location>ground and house</HousePets:Location>
+	</rdf:Description>
+</rdf:RDF>
+
+

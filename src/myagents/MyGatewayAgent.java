@@ -46,8 +46,10 @@ public class MyGatewayAgent extends GatewayAgent {
 			for (AMSAgentDescription recAgents : agents) {
 				if(recAgents.getName().equals(this.getAID())==false) {
 					try {
-						getContentManager().fillContent(msg, new Action(recAgents.getName(),this.profOperation));
-						msg.addReceiver(recAgents.getName());
+						if(!recAgents.getName().getLocalName().equals("DocumentAgent")) {
+							getContentManager().fillContent(msg, new Action(recAgents.getName(),this.profOperation));
+							msg.addReceiver(recAgents.getName());
+						}
 					} catch ( CodecException | OntologyException e) {
 						e.printStackTrace();
 					}
@@ -59,11 +61,11 @@ public class MyGatewayAgent extends GatewayAgent {
 		// Requested operation belongs to Search Organization
 		else if(obj instanceof SearchOperation) {
 			this.searchOperation = (SearchOperation) obj;
-			
+			System.out.println("### GatewayAgent : Sending Message to Search Agent ###");
 			ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
 			msg.setLanguage(codec.getName());
 			msg.setOntology(searchOntology.getName());
-			
+			msg.setSender(this.getAID());
 			for (AMSAgentDescription recAgents : agents) {
 				if(recAgents.getName().equals(this.getAID())==false) {
 					try {
@@ -113,7 +115,7 @@ public class MyGatewayAgent extends GatewayAgent {
                 
                 if (msg!=null)    {
                 	if (msg.getPerformative() == ACLMessage.NOT_UNDERSTOOD){
-                        System.out.println("\n ### GatewayAgent : Response from agent = NOT UNDERSTOOD!###");
+                        System.out.println("\n ### GatewayAgent : Response from "+msg.getSender().getLocalName()+" : NOT UNDERSTOOD!###");
                      }
                 	else if (msg.getPerformative() != ACLMessage.INFORM){
                         System.out.println("### GatewayAgent : Unexpected msg from agent! ###");
@@ -130,6 +132,10 @@ public class MyGatewayAgent extends GatewayAgent {
     							}
     							else if(result.getValue() instanceof SearchBean) {
     								searchOperation.setSearch((SearchBean)result.getValue());
+    								jade.util.leap.Iterator iter = ((SearchBean)result.getValue()).getResultList().iterator();
+    								while(iter.hasNext()){
+    									System.out.println("GATEWAY ALDIGI :"+iter.next().toString() );
+    								}
     								releaseCommand(searchOperation);
     							}
     							else if(result.getValue() instanceof jade.util.leap.List) {

@@ -1,35 +1,49 @@
 package myagents;
 
+import java.io.IOException;
+import java.util.HashMap;
 
 import jade.content.Concept;
 import jade.content.ContentElement;
 import jade.content.lang.Codec;
 import jade.content.lang.Codec.CodecException;
 import jade.content.lang.sl.SLCodec;
+import jade.content.onto.Ontology;
+import jade.content.onto.OntologyException;
+import jade.content.onto.basic.Action;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.domain.DFService;
-import jade.lang.acl.*;
-import jade.content.onto.Ontology;
-import jade.content.onto.OntologyException;
-import jade.content.onto.basic.*;
-import ontologies.profile.*;
-import roles.user.ProfileHandle;
+import jade.lang.acl.ACLMessage;
+import myagents.DocumentAgent.HandleProfileOperation;
+import ontologies.personalize.RankBean;
+import ontologies.personalize.RankingOntology;
+import ontologies.personalize.RankingOperation;
+import ontologies.personalize.RankingVocabulary;
+import roles.personalize.RankingHandle;
 
-
-public class ProfileAgent extends Agent implements ProfileVocabulary{
-	/**
-	 * 
-	 */
+public class HistoryAgent extends Agent implements RankingVocabulary{
 	private static final long serialVersionUID = 1L;
 	private Object obj = null;
-	private ProfileHandle roleExecution = new ProfileHandle();
+	private RankingHandle roleExecution = new RankingHandle("HistoryDocument");
 	private Codec codec = new SLCodec();
-	private Ontology ontology = ProfileOntology.getInstance();
+	private Ontology ontology = RankingOntology.getInstance();
+	private float constQuery = (float) 0.1;
+	private float constInterest = (float) 0.1;
+	private float constHistory = (float) 0.8;
 	
 	protected void setup()
 	{
+		//index files
+		try {
+			roleExecution.indexFileOrDirectory("/home/arda/workspace/SearchEngine/rfds");
+			roleExecution.closeIndex();
+		} catch (IOException e1) {
+			System.out.println("Error indexing "  + " : " + e1.getMessage()); 
+			e1.printStackTrace();
+		}
+		
 		// Register language and ontology
 	      getContentManager().registerLanguage(codec);
 	      getContentManager().registerOntology(ontology);
@@ -41,7 +55,7 @@ public class ProfileAgent extends Agent implements ProfileVocabulary{
 		public void action() {
      		 
              ACLMessage msg = receive();
-             System.out.println("### ProfileAgent : Message received ###");
+             System.out.println("### HistoryDocumentAgent : Message received ###");
              if (msg!=null)    {
             	 try {
 					ContentElement content = getContentManager().extractContent(msg);
@@ -52,7 +66,7 @@ public class ProfileAgent extends Agent implements ProfileVocabulary{
 						case(ACLMessage.REQUEST) :
 							
 							System.out.print("\n###Request from : " + msg.getSender().getLocalName());
-							if(action instanceof ProfileOperation) {
+							if(action instanceof RankingOperation) {
 								addBehaviour(new HandleProfileOperation(myAgent, msg));
 							}
 							else replyNotUnderstood(msg);
@@ -62,7 +76,8 @@ public class ProfileAgent extends Agent implements ProfileVocabulary{
 							break;
 					}
 				} catch ( CodecException | OntologyException e) {
-					System.out.println("\n ### ProfileAgent does not know this ontology");
+					System.out.println("\n ### HistoryDocumentAgent does not know this ontology");
+					//e.printStackTrace();
 				} 
              } 
              else {
@@ -87,16 +102,20 @@ public class ProfileAgent extends Agent implements ProfileVocabulary{
 
 		         try {
 		            ContentElement content = getContentManager().extractContent(request);
-		            ProfileOperation po = (ProfileOperation)((Action)content).getAction();
+		            RankingOperation ro = (RankingOperation)((Action)content).getAction();
 		            ACLMessage reply = request.createReply();
-		            Object obj = processOperation(po);
+		            Object obj = processOperation(ro);
+		            
 		            if (obj == null) replyNotUnderstood(request);
 		            else {
-		               reply.setPerformative(ACLMessage.INFORM);
-		               Result result = new Result((Action)content, obj);
-		               getContentManager().fillContent(reply, result);
-		               send(reply);
-		               System.out.println("\n### ProfileAgent : Operation processed. ###");
+		            	ro.setRankedList((jade.util.leap.List)obj);
+		            	reply.setPerformative(ACLMessage.REQUEST);
+		            	reply.setSender(getAID());
+		              // Result result = new Result((Action)content, obj);
+		            	getContentManager().fillContent(reply,new Action(request.getSender(),ro));
+		              // getContentManager().fillContent(reply, result);
+		            	send(reply);
+		            	System.out.println("\n### HistoryDocumentAgent : Operation processed. ###");
 		            }
 		         }
 		         catch(Exception ex) { ex.printStackTrace(); }
@@ -113,38 +132,28 @@ public class ProfileAgent extends Agent implements ProfileVocabulary{
 		         reply.setPerformative(ACLMessage.NOT_UNDERSTOOD);
 		         getContentManager().fillContent(reply, content);
 		         send(reply);
-		         System.out.println("\n### Profile Agent reply : Not understood! ###");
+		         System.out.println("\n### HistoryDocumentAgentreply : Not understood! ###");
 		      }
 		      catch(Exception ex) { ex.printStackTrace(); }
 		   }
 	
-	Object processOperation(ProfileOperation po) {
+	Object processOperation(RankingOperation ro) {
 	// -------------------------------------------
-		UserBean usr = po.getUser();
-		if (po.getType() == MODIFY_PROFILE) {
-			usr = roleExecution.doEditGeneral(usr,po.getModifyUser());
-			System.out.println("### ProfileAgent : MODIFY_PROFILE called ###");
-	    }
-		else if (po.getType() == AUTHENTICATE_USER) {
-			usr.setAuthentication(roleExecution.doAuthentication(usr));
-			System.out.println("### ProfileAgent : AUTHENTICATE_USER called ###");
-	    }
-		else if (po.getType() == REGISTER_USER) {
-			roleExecution.doRegister(usr.getNickname(), usr.getPassword());
-			System.out.println("### ProfileAgent : REGISTER_USER called ###");
+		RankBean rank = ro.getRank();
+		if(ro.getType() == RANK_RESULT){
+			try {
+				HashMap<String,Float> v1 = roleExecution.getRelevance(rank.getSearchQuery());
+				HashMap<String,Float> v2 = roleExecution.getListRelevance(rank.getInterestList());
+				HashMap<String,Float> v3 = roleExecution.getListRelevance(rank.getHistoryList());
+				jade.util.leap.List resultVector = roleExecution.calculateRelevance(v1, v2, v3,
+						constQuery,constInterest,constHistory,rank.getResultList());
+				return resultVector;
+			} catch (IOException e) {
+				System.out.println("###HistoryDocumentAgent : Job could not be processed ###");
+				e.printStackTrace();
+			}
 		}
-		else if (po.getType() == DELETE_USER) {
-			roleExecution.doDeleteProfile(usr.getNickname());
-			System.out.println("### ProfileAgent : DELETE_USER called ###");
-		}
-		else if (po.getType() == POPULATE_PROFILE) {
-			usr = roleExecution.doPopulate(usr, "");
-			System.out.println("### ProfileAgent : POPULATE_PROFILE called ###");
-		}
-		else {
-			return null;
-		}
-	     return usr;
+	     return null;
 	   }
 	
 	protected void takeDown() {

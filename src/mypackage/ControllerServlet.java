@@ -33,11 +33,14 @@ public class ControllerServlet extends HttpServlet implements ProfileVocabulary,
 	        case "Search": 
 	        {
 	        	String searchword = request.getParameter("searchword");
-	        	
+	        	UserBean curUser = (UserBean)session.getAttribute("curUser");
 	        	//Set up the operation for MAS
 	        	searchOperation = new SearchOperation();
 	        	SearchBean myBean = new SearchBean();
 	        	myBean.setWord(searchword);
+	        	if(curUser != null){
+	        		searchOperation.setNickname(curUser.getNickname());
+	        	}
 	            searchOperation.setSearch(myBean);
 	            searchOperation.setType(SEARCH_KEYWORD);
 	            try {
@@ -46,8 +49,12 @@ public class ControllerServlet extends HttpServlet implements ProfileVocabulary,
 					e.printStackTrace();
 				}
 	            myBean = (SearchBean) searchOperation.getSearch();
+	            jade.util.leap.Iterator asd= myBean.getResultList().iterator();
+	            while(asd.hasNext()){
+	            	System.out.println("SERVLET ALDIGI: " + asd.next().toString());
+	            }
 	            session.setAttribute("bean",myBean);
-	            UserBean curUser = (UserBean)session.getAttribute("curUser");
+	           
 	            if (curUser != null) {
 	            	searchOperation.setNickname(curUser.getNickname());
 	            	searchOperation.setType(ADD_SEARCH_HISTORY);
@@ -225,6 +232,28 @@ public class ControllerServlet extends HttpServlet implements ProfileVocabulary,
 	        	searchOperation = new SearchOperation();
 	        	searchOperation.setUrl(urlRedirect);
 	        	searchOperation.setType(LOAD_PAGE);
+	        	try {
+	        		JadeGateway.execute(searchOperation);
+	        	}
+	        	catch(Exception e) {
+	        		e.printStackTrace();
+	        	}
+	        	jade.util.leap.List myList = searchOperation.getResultList();
+	        	session.setAttribute("contentList", myList);
+	        	session.setAttribute("currentUrl", urlRedirect);
+	        	RequestDispatcher rd=request.getRequestDispatcher("PageResult.jsp");  
+	            rd.forward(request, response);
+	            searchOperation = null;
+	        	break;
+	        }
+	        case "modifyPage" :
+	        {
+	        	String urlRedirect = (String)session.getAttribute("currentUrl");
+	        	//here needs to be a loop to get all boxes
+	        	
+	        	searchOperation = new SearchOperation();
+	        	searchOperation.setUrl(urlRedirect);
+	        	searchOperation.setType(MODIFY_PAGE);
 	        	try {
 	        		JadeGateway.execute(searchOperation);
 	        	}

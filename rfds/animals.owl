@@ -1,0 +1,95 @@
+<rdf:RDF
+    xmlns:Animal="http://nidd.com/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xml:base="http://nidd.com/Animal#">
+		<rdf:Description rdf:ID="Animal_Mammal">
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<Animal:Name>Mammals</Animal:Name>
+		<Animal:CreerPar>A. Icmez</Animal:CreerPar>
+		<Animal:Type>mammal</Animal:Type>
+		<Animal:Size>small</Animal:Size>
+		<Animal:Size>average</Animal:Size>
+		<Animal:Size>big</Animal:Size>
+		<Animal:Location>house</Animal:Location>
+		<Animal:Location>jungle</Animal:Location>
+		<Animal:Location>ocean</Animal:Location>
+		<Animal:Location>sky</Animal:Location>
+		<Animal:Characteristics>body covered by hair or fur</Animal:Characteristics>
+		<Animal:Characteristics>warm-blooded</Animal:Characteristics>
+		<Animal:Characteristics>have a backbone</Animal:Characteristics> 
+		<Animal:Characteristics>produce milk</Animal:Characteristics>
+	</rdf:Description>
+	<rdf:Description rdf:ID="Animal_Reptile">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<Animal:Name>Reptiles</Animal:Name>
+		<Animal:CreerPar>A. Icmez</Animal:CreerPar>
+		<Animal:Type>reptile</Animal:Type>
+		<Animal:Size>small</Animal:Size>
+		<Animal:Size>average</Animal:Size>
+		<Animal:Size>big</Animal:Size>
+		<Animal:Location>house</Animal:Location>
+		<Animal:Location>jungle</Animal:Location>
+		<Animal:Location>ocean</Animal:Location>
+		<Animal:Characteristics>body covered by scales</Animal:Characteristics>
+		<Animal:Characteristics>have a backbone</Animal:Characteristics>
+		<Animal:Characteristics>most lay hard shelled eggs on land</Animal:Characteristics> 
+		<Animal:Characteristics>cold-blooded</Animal:Characteristics>
+	</rdf:Description>
+	<rdf:Description rdf:ID="Animal_Bird">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<Animal:Name>Birds</Animal:Name>
+		<Animal:CreerPar>A. Icmez</Animal:CreerPar>
+		<Animal:Type>bird</Animal:Type>
+		<Animal:Size>small</Animal:Size>
+		<Animal:Size>average</Animal:Size>
+		<Animal:Location>house</Animal:Location>
+		<Animal:Location>jungle</Animal:Location>
+		<Animal:Location>sky</Animal:Location>
+		<Animal:Characteristics>body covered by feathers</Animal:Characteristics>
+		<Animal:Characteristics>warm-blooded</Animal:Characteristics>
+		<Animal:Characteristics>have a backbone</Animal:Characteristics> 
+		<Animal:Characteristics>lay eggs</Animal:Characteristics>
+	</rdf:Description>
+	<rdf:Description rdf:ID="Animal_Spider">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<Animal:Name>Spiders</Animal:Name>
+		<Animal:CreerPar>A. Icmez</Animal:CreerPar>
+		<Animal:Type>spider</Animal:Type>
+		<Animal:Size>small</Animal:Size>
+		<Animal:Location>house</Animal:Location>
+		<Animal:Location>jungle</Animal:Location>
+		<Animal:Characteristics>also termed arachnids</Animal:Characteristics>
+		<Animal:Characteristics>8 legs</Animal:Characteristics>
+		<Animal:Characteristics>8 eyes</Animal:Characteristics> 
+		<Animal:Characteristics>they spin webs</Animal:Characteristics>
+	</rdf:Description>
+	<rdf:Description rdf:ID="Animal_Insect">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<Animal:Name>Insects</Animal:Name>
+		<Animal:CreerPar>A. Icmez</Animal:CreerPar>
+		<Animal:Type>insect</Animal:Type>
+		<Animal:Size>small</Animal:Size>
+		<Animal:Location>house</Animal:Location>
+		<Animal:Location>jungle</Animal:Location>
+		<Animal:Location>ocean</Animal:Location>
+		<Animal:Characteristics>most are small air-breathing animals</Animal:Characteristics>
+		<Animal:Characteristics>6 legs</Animal:Characteristics>
+		<Animal:Characteristics>2 antennae</Animal:Characteristics> 
+		<Animal:Characteristics>3 body sections (head, thorax, abdomen)</Animal:Characteristics>
+	</rdf:Description>
+	<rdf:Description rdf:ID="Animal_Aquatic">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<Animal:Name>Aquatics</Animal:Name>
+		<Animal:CreerPar>A. Icmez</Animal:CreerPar>
+		<Animal:Type>aquatic</Animal:Type>
+		<Animal:Size>small</Animal:Size>
+		<Animal:Size>average</Animal:Size>
+		<Animal:Size>big</Animal:Size>
+		<Animal:Location>ocean</Animal:Location>
+		<Animal:Characteristics>most have gills</Animal:Characteristics>
+		<Animal:Characteristics>found in lakes, rivers, and oceans</Animal:Characteristics>
+	</rdf:Description>
+</rdf:RDF>
+
+

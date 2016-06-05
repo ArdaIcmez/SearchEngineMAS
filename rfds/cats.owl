@@ -1,0 +1,55 @@
+<rdf:RDF
+    xmlns:Cats="http://aicmez.com/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xml:base="http://aicmez.com/Cats#">
+		<rdf:Description rdf:ID="Aegean_Cat">
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<Cats:Name>Aegean Cat</Cats:Name>
+		<Cats:Color>White</Cats:Color>
+		<Cats:Color>Black</Cats:Color>
+		<Cats:CreerPar>A. Icmez</Cats:CreerPar>
+		<Cats:Date>June 2016</Cats:Date>
+		<Cats:EyeColor>Blue</Cats:EyeColor>
+		<Cats:EyeColor>Green</Cats:EyeColor>
+		<Cats:Coat>Semi long</Cats:Coat>
+		<Cats:Pattern>Tri colored</Cats:Pattern> 
+		<Cats:Country>Greece</Cats:Country>
+		<Cats:Country>Turkey</Cats:Country>
+		<Cats:Country>Cyprus</Cats:Country>
+		<Cats:Type>mammal</Cats:Type>
+		<Cats:Size>average</Cats:Size>
+	</rdf:Description>
+	<rdf:Description rdf:ID="Bengal_Cat">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<Cats:Name>Bengal Cat</Cats:Name>
+		<Cats:Color>Yellow</Cats:Color>
+		<Cats:Color>Black</Cats:Color>
+		<Cats:CreerPar>A. Icmez</Cats:CreerPar>
+		<Cats:Date>June 2016</Cats:Date>
+		<Cats:EyeColor>Brown</Cats:EyeColor>
+		<Cats:EyeColor>Hazel</Cats:EyeColor>
+		<Cats:Coat>Short</Cats:Coat>
+		<Cats:Pattern>Spotted</Cats:Pattern> 
+		<Cats:Country>United States</Cats:Country>
+		<Cats:Type>mammal</Cats:Type>
+		<Cats:Size>big</Cats:Size>
+	</rdf:Description>
+	<rdf:Description rdf:ID="Burmese_Cat">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<Cats:Name>Burmese Cat</Cats:Name>
+		<Cats:Color>Gray</Cats:Color>
+		<Cats:Color>Black</Cats:Color>
+		<Cats:CreerPar>A. Icmez</Cats:CreerPar>
+		<Cats:Date>June 2016</Cats:Date>
+		<Cats:EyeColor>Green</Cats:EyeColor>
+		<Cats:Coat>short</Cats:Coat>
+		<Cats:Pattern>Solid</Cats:Pattern> 
+		<Cats:Country>Burma</Cats:Country>
+		<Cats:Country>Thailand</Cats:Country>
+		<Cats:Type>mammal</Cats:Type>
+		<Cats:Size>small</Cats:Size>
+	</rdf:Description>
+</rdf:RDF>
+
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF[
+	<!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	<!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+	<!ENTITY owl 'http://www.w3.org/2002/07/owl#'>
+	<!ENTITY smw 'http://smw.ontoware.org/2005/smw#'>
+	<!ENTITY smwdt 'http://smw.ontoware.org/2005/smw-datatype#'>
+	<!ENTITY wiki 'http://ontoworld.org/wiki/Special:URIResolver/'>
+	<!ENTITY relation 'http://ontoworld.org/wiki/Special:URIResolver/Relation-3A'>
+	<!ENTITY attribute 'http://ontoworld.org/wiki/Special:URIResolver/Attribute-3A'>
+	<!ENTITY wikiurl 'http://ontoworld.org/wiki/'>
+]>
+
+<rdf:RDF
+	xmlns:rdf="&rdf;"
+	xmlns:rdfs="&rdfs;"
+	xmlns:owl ="&owl;"
+	xmlns:smw="&smw;"
+	xmlns:wiki="&wiki;"
+	xmlns:relation="&relation;"
+	xmlns:attribute="&attribute;">
+	<!-- reference to the Semantic MediaWiki schema -->
+	<owl:AnnotationProperty rdf:about="&smw;hasArticle">
+		<rdfs:isDefinedBy rdf:resource="http://smw.ontoware.org/2005/smw"/>
+	</owl:AnnotationProperty>
+	<owl:AnnotationProperty rdf:about="&smw;hasType">
+		<rdfs:isDefinedBy rdf:resource="http://smw.ontoware.org/2005/smw"/>
+	</owl:AnnotationProperty>
+	<owl:Class rdf:about="&smw;Thing">
+		<rdfs:isDefinedBy rdf:resource="http://smw.ontoware.org/2005/smw"/>
+	</owl:Class>
+	<!-- exported page data -->
+	<smw:Thing rdf:about="&wiki;Programming_language">
+		<rdfs:label>Programming language</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Programming_language"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Programming_language"/>
+		<relation:Subclass_of rdf:resource="&wiki;Computer_language"/>
+	</smw:Thing>
+	<owl:ObjectProperty rdf:about="&relation;Coded_in">
+		<rdfs:label>Relation:Coded in</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Coded_in"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Coded_in"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="&relation;Speaks_Programming-2DLanguage">
+		<rdfs:label>Relation:Speaks Programming-Language</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Speaks_Programming-Language"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Speaks_Programming-Language"/>
+	</owl:ObjectProperty>
+	<smw:Thing rdf:about="&wiki;D">
+		<rdfs:label>D</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;D"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/D"/>
+		<rdf:type rdf:resource="&wiki;Category-3ATestpage"/>
+		<relation:Is_a rdf:resource="&wiki;Programming_language"/>
+	</smw:Thing>
+	<!-- auxilliary definitions -->
+	<owl:ObjectProperty rdf:about="&relation;Subclass_of">
+		<rdfs:label>Relation:Subclass of</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Subclass_of"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Subclass_of"/>
+	</owl:ObjectProperty>
+	<smw:Thing rdf:about="&wiki;Computer_language">
+		<rdfs:label>Computer language</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Computer_language"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Computer_language"/>
+	</smw:Thing>
+	<owl:Class rdf:about="&wiki;Category-3ATestpage">
+		<rdfs:label>Category:Testpage</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Category:Testpage"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Category:Testpage"/>
+	</owl:Class>
+	<owl:ObjectProperty rdf:about="&relation;Is_a">
+		<rdfs:label>Relation:Is a</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Is_a"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Is_a"/>
+	</owl:ObjectProperty>
+</rdf:RDF>

@@ -2,10 +2,11 @@ package ontologies.search;
 
 public interface SearchVocabulary {
 	
-		// Basic Vocabulary of Profile Ontology
+		// Basic Vocabulary of Search Ontology
 		public static final int SEARCH_KEYWORD = 1;
 		public static final int ADD_SEARCH_HISTORY = 2;
 		public static final int LOAD_PAGE = 3;
+		public static final int MODIFY_PAGE = 4;
 		public static final String RESULTS_FOUND = "Results found";
 		public static final String RESULTS_NOT_FOUND = "No results found.";
 		

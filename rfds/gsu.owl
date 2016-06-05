@@ -20,36 +20,37 @@
     <User:Role>Studentasd</User:Role>
     <User:BrowseHistory>www.google.fr</User:BrowseHistory>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.aicmez.com/user/#Lkl">
-    <User:Password>123</User:Password>
-    <User:Username>Lkl</User:Username>
+  <rdf:Description rdf:about="http://www.aicmez.com/user/#Can">
+    <User:BrowseHistory>dsadsa</User:BrowseHistory>
+    <User:Interests>Cats</User:Interests>
+    <User:Username>Can</User:Username>
+    <User:Interests>Diseases</User:Interests>
+    <User:BrowseHistory>mammal</User:BrowseHistory>
+    <User:Role>Management</User:Role>
+    <User:Job>Engineer</User:Job>
+    <User:Name>Can</User:Name>
+    <User:Interests>Dogs</User:Interests>
+    <User:Interests>Big dog</User:Interests>
     <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
+    <User:Password>12</User:Password>
+    <User:Surname>Icmez</User:Surname>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.aicmez.com/user/#Lkl">
+    <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
+    <User:Username>Lkl</User:Username>
+    <User:Password>123</User:Password>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.aicmez.com/user/#Quep">
-    <User:BrowseHistory>we</User:BrowseHistory>
+    <User:Interests></User:Interests>
     <User:Name>Arda</User:Name>
-    <User:Role>asd</User:Role>
-    <User:Interests>asd</User:Interests>
-    <User:Interests>KAla</User:Interests>
     <User:BrowseHistory>asd</User:BrowseHistory>
-    <User:BrowseHistory>kalamar</User:BrowseHistory>
-    <User:Job>kalamar</User:Job>
-    <User:BrowseHistory>Kalamar</User:BrowseHistory>
-    <User:Role></User:Role>
     <User:Password>12</User:Password>
-    <User:Surname>kalamari</User:Surname>
-    <User:BrowseHistory>Marti</User:BrowseHistory>
-    <User:Surname>asd</User:Surname>
-    <User:Interests>Marlar</User:Interests>
     <User:Role>Student</User:Role>
     <User:Job>Computer Engineer</User:Job>
-    <User:BrowseHistory>KAlamar</User:BrowseHistory>
-    <User:BrowseHistory>Quep</User:BrowseHistory>
     <User:Surname>Icmez</User:Surname>
     <User:Username>Quep</User:Username>
-    <User:BrowseHistory>arda</User:BrowseHistory>
-    <User:BrowseHistory>re</User:BrowseHistory>
     <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
+    <User:BrowseHistory>sdf</User:BrowseHistory>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.aicmez.com/user/#Paoli">
     <User:Job>CS</User:Job>
@@ -66,6 +67,24 @@
     <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
     <User:Interests>Computers</User:Interests>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.aicmez.com/user/#Arda">
+    <User:Job></User:Job>
+    <User:Interests>retriever</User:Interests>
+    <User:BrowseHistory>big dog pizza</User:BrowseHistory>
+    <User:Interests>big dog</User:Interests>
+    <User:Username>Arda</User:Username>
+    <User:BrowseHistory>big dog pizza mammal</User:BrowseHistory>
+    <User:BrowseHistory>big pizza</User:BrowseHistory>
+    <User:Interests>dog</User:Interests>
+    <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
+    <User:Surname></User:Surname>
+    <User:Password>12</User:Password>
+    <User:Name></User:Name>
+    <User:Role></User:Role>
+    <User:BrowseHistory>mammal</User:BrowseHistory>
+    <User:Interests>iris</User:Interests>
+    <User:BrowseHistory>big iris pizza</User:BrowseHistory>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.aicmez.com/user/#Muep">
     <User:Password>2222</User:Password>
     <User:Interests>MProgramming2</User:Interests>
@@ -77,8 +96,8 @@
     <User:Username>Muep</User:Username>
     <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
     <User:BrowseHistory>www.m21.com</User:BrowseHistory>
-    <User:Job>Computer Mengineer</User:Job>
     <User:Surname>Micmez</User:Surname>
+    <User:Job>Computer Mengineer</User:Job>
     <User:ProfileId>00002</User:ProfileId>
     <User:Role>Student</User:Role>
   </rdf:Description>
@@ -94,12 +113,12 @@
     <User:Username>Mertcan</User:Username>
     <User:BrowseHistory>www.stackoverflow.com</User:BrowseHistory>
     <User:Surname>Madenci</User:Surname>
-    <User:Job>Industrial Engineer</User:Job>
     <User:BrowseHistory>www.linkedin.com</User:BrowseHistory>
+    <User:Job>Industrial Engineer</User:Job>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.aicmez.com/user/#Metin">
-    <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
-    <User:Username>Metin</User:Username>
     <User:Password>123</User:Password>
+    <User:Username>Metin</User:Username>
+    <rdf:type rdf:resource="http://www.aicmez.com/user#"/>
   </rdf:Description>
 </rdf:RDF>

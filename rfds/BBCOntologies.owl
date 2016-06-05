@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dc11="http://purl.org/dc/elements/1.1/"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:ns0="http://www.bbc.co.uk/ontologies/provenance/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#">
+
+  <owl:Ontology rdf:about="http://purl.org/ontology/wo/">
+    <rdf:type rdf:resource="http://www.bbc.co.uk/ontologies/provenance/Ontology"/>
+    <rdfs:comment xml:lang="en-gb">A simple vocabulary for describing biological species and related taxa. The vocabulary defines terms for describing the names and ranking of taxa, as well as providing support for describing their habitats, conservation status, and behavioural characteristics, etc</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wildlife Ontology</rdfs:label>
+    <dc11:creator rdf:resource="http://www.ldodds.com#me"/>
+    <dc11:creator rdf:resource="http://tomscott.name/"/>
+    <dc:title xml:lang="en-gb">Wildlife Ontology</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-01-04</dc:created>
+    <dc11:date>Date: 2013/12/18 11:33:00 </dc11:date>
+    <dc:license rdf:resource="http://creativecommons.org/licenses/by/1.0#id"/>
+    <ns0:canonicalLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://repo.dev.bbc.co.uk/services/linked-data/ontologies/domain/kl/wildlife</ns0:canonicalLocation>
+    <ns0:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copying foaf: makers into dc:contributor.</ns0:changeReason>
+    <ns0:slug rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wo</ns0:slug>
+    <ns0:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1</ns0:version>
+    <ns0:public rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ns0:public>
+    <foaf:maker rdf:resource="http://www.ldodds.com#me"/>
+    <foaf:maker rdf:resource="http://tomscott.name/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>
+    <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <owl:imports rdf:resource="http://purl.org/vocab/vann/"/>
+    <owl:imports rdf:resource="http://www.bbc.co.uk/ontologies/provenance"/>
+    <owl:priorVersion rdf:resource="http://purl.org/ontology/wo/1.0"/>
+    <owl:versionIRI rdf:resource="http://purl.org/ontology/wo/1.1"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1</owl:versionInfo>
+  </owl:Ontology>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/growsIn">
+    <rdfs:comment xml:lang="en-gb">associates a taxon rank with a habitat in which it grows. Sub-property of wo:habitat to be used for plants, fungi, etc</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">grows in</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/ontology/wo/Habitat"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/ontology/wo/speciesName">
+    <rdfs:comment xml:lang="en-gb">specifies the species part of a binomial name, allowing this portion of the name to be explicitly described. Therefore this property will typically only be used in TaxonNames associated with species. The property is largely provided as a convenience to avoid applications having to parse the binomial name.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonName"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">species name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/wo/taxonomicName"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/adaptation">
+    <rdfs:comment xml:lang="en-gb">associates a taxon rank with an adaptation which it displays</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">adaptation</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/ontology/wo/Adaptation"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/SurvivalStrategy">
+    <rdfs:comment xml:lang="en-gb">Survival strategies include adaptations to changes in the organisms environment, including: hibernation, abscission and migration.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Survival Strategy</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/Adaptation"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/SocialBehaviour">
+    <rdfs:comment xml:lang="en-gb">Social behaviour is all about how an animal interacts with members of its own species. For instance, does it live in a colony or on its own, does it fight to be top of the pecking order, or does it try to keep strangers away from its home?</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Social Behaviour</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/Adaptation"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <foaf:Person rdf:about="http://www.ldodds.com#me">
+    <foaf:name>Leigh Dodds</foaf:name>
+  </foaf:Person>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/ontology/wo/className">
+    <rdfs:comment xml:lang="en-gb">Used to specify the name of a class as part of a Taxon Name</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">class name</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/wo/taxonomicName"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/Kingdom">
+    <rdfs:comment xml:lang="en-gb">Kingdoms are the major categories into which scientists divide up all living things. The main kingdoms are animals, plants, fungi and bacteria, although there are others. Each kingdom has its own suite of defining characteristics - for instance plants have rigid cell walls, whilst animals do not.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Kingdom</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.bbc.co.uk/nature/kingdom"/>
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Kingdom_%28biology%29"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/Adaptation">
+    <rdfs:comment xml:lang="en-gb">An adaptation is any feature of an animal or plant which makes it better suited for a particular habitat or to do a particular task. For instance, being streamlined is an adaptation to swimming fast and being able to survive on very little water is an adaptation to life in the desert.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Adaptation</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.bbc.co.uk/nature/adaptations"/>
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Adaptation"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/ontology/wo/yearAssessed">
+    <rdfs:comment xml:lang="en-gb">the year in which the conservation status was assessed.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/ConservationStatus"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">year assessed</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/ontology/wo/populationTrend">
+    <rdfs:comment xml:lang="en-gb">provides some indication of the population trend associated with an assessment of a taxon's conversation status. The value of this property is a simple literal, and is recommended to be one of: Decreasing, Increasing, Stable, Unknown.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/ConservationStatus"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">population trend</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>unstable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/redListStatus">
+    <rdfs:comment xml:lang="en-gb">associates a Conservation Status with a category in the IUCN Red List</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/ConservationStatus"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">red list status</rdfs:label>
+    <rdfs:range>
+      <owl:Class rdf:about="http://purl.org/ontology/wo/RedListStatus">
+        <rdfs:comment xml:lang="en-gb">A category in the IUCN red list, 2001.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+        <rdfs:label xml:lang="en-gb">Red List Status</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.iucnredlist.org/technical-documents/categories-and-criteria/2001-categories-criteria"/>
+        <ns1:term_status>testing</ns1:term_status>
+      </owl:Class>
+    </rdfs:range>
+
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/genus">
+    <rdfs:comment xml:lang="en-gb">associates a taxon rank with a genus</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">genus</rdfs:label>
+    <rdfs:range>
+      <owl:Class rdf:about="http://purl.org/ontology/wo/Genus">
+        <rdfs:comment xml:lang="en-gb">A genus is a scientific way of showing that species are very closed related to each other. In fact the first word of the species' scientific name is its genus. So for lions (Panthera leo), Panthera is the genus and tells us that they are closely related to tigers (Panthera tigris), because they share the name</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+        <rdfs:label xml:lang="en-gb">Genus</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.bbc.co.uk/nature/genus"/>
+        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Genus"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+        <ns1:term_status>testing</ns1:term_status>
+      </owl:Class>
+    </rdfs:range>
+
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/ontology/wo/shortDescription">
+    <rdfs:comment xml:lang="en-gb">associates a short description with a Collection.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">short description</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/FreshwaterHabitat">
+    <rdfs:comment>Freshwater habitats include bogs, ponds, lakes, rivers and streams. About 3% of Earth's water is freshwater, but this includes the water locked up in the ice caps and trapped in rocks and soil as groundwater. Only a tiny fraction (0.014%) is surface water in the form of rivers, lakes and swamps.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Freshwater Habitat</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/Habitat"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/ontology/wo/orderName">
+    <rdfs:comment xml:lang="en-gb">Used to specify the name of an order as part of a Taxon Name</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">order name</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/wo/taxonomicName"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/PredationStrategy">
+    <rdfs:comment xml:lang="en-gb">Predation is catching and killing an animal in order to eat it. The prey can be chased, ambushed or caught in a trap such as a spider's web.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Predation Strategy</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/Adaptation"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/Ecozone">
+    <rdfs:comment xml:lang="en-gb">Ecozones are a method of dividing up the Earth's surface. Each ecozone is a large area that contains a number of habitats, which are linked by the evolutionary history of the animals and plants within them. For instance one ecozone is Australasia, because its marsupials evolved in isolation to mammals in the rest of the world.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Ecozone</rdfs:label>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/ontology/wo/commonName">
+    <rdfs:comment xml:lang="en-gb">associates a formal taxon name with a common version. E.g. Panthera leo might be associated with a common name of 'Lion'. A given taxon name may have several common names</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonName"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">common name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/family">
+    <rdfs:comment xml:lang="en-gb">associates a taxon rank with a family</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">family</rdfs:label>
+    <rdfs:range>
+      <owl:Class rdf:about="http://purl.org/ontology/wo/Family">
+        <rdfs:comment xml:lang="en-gb">A family is a scientific grouping of closely related organisms. It has smaller groups, called genera and species, within it. A family can have a lot of members or only a few. Examples of families include the cats (Felidae), the gulls (Laridae) and the grasses (Poaceae).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+        <rdfs:label xml:lang="en-gb">Family</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.bbc.co.uk/nature/family"/>
+        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Family_%28biology%29"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+        <ns1:term_status>testing</ns1:term_status>
+      </owl:Class>
+    </rdfs:range>
+
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/collection">
+    <rdfs:comment xml:lang="en-gb">associates a taxon rank, habitat, species, clip with a collection of which it is a member</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">collection</rdfs:label>
+    <rdfs:range>
+      <owl:Class rdf:about="http://purl.org/ontology/wo/Collection">
+        <rdfs:comment>A collection of resources, including documents, multimedia files, programme clips and their associated taxa, which aims to showcase a particular aspect of natural history film-making, or illustrate aspects of the natural world. A collection provides an alternate way to organize content over and above the basic taxonomic hierarchy.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+        <rdfs:label>Collection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+        <ns1:term_status>testing</ns1:term_status>
+      </owl:Class>
+    </rdfs:range>
+
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/ontology/wo/kingdomName">
+    <rdfs:comment xml:lang="en-gb">Used to specify the name of a kingdom as part of a Taxon Name</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">kingdom name</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/wo/taxonomicName"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/Species">
+    <rdfs:comment xml:lang="en-gb">Generic class defining a biological species</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">species</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.bbc.co.uk/nature/species"/>
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Species"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/name">
+    <rdfs:comment xml:lang="en-gb">associates a taxon rank with a taxon name</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">name</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/ontology/wo/TaxonName"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/habitat">
+    <rdfs:comment xml:lang="en-gb">associates a taxon rank with a habitat in which it may typically be found</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">habitat</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/ontology/wo/Habitat"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/LocomotionAdaptation">
+    <rdfs:comment xml:lang="en-gb">Locomotion is how an animal gets around - for instance by swimming, flying or climbing.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Locomotion</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/Adaptation"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/ontology/wo/taxonomicName">
+    <rdfs:comment xml:lang="en-gb">a naming property, associating a formal taxonomic name with a Taxon Name instance. This property is a parent of a number of sub-properties that provide more specific terms for denoting names of families, phyla, species, etc.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonName"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">taxonomic name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/TerrestrialHabitat">
+    <rdfs:comment>Terrestrial habitats include forests, grasslands, deserts and rainforests. They are typically defined by factors such as plant structure (trees and grasses), leaf types (eg broadleaf and needleleaf), plant spacing (forest, woodland, savanna) and climate.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Terrestrial Habitat</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/Habitat"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/ReproductionStrategy">
+    <rdfs:comment xml:lang="en-gb">Reproduction covers all the tactics and behaviours involved in obtaining a mate, conceiving the next generation and successfully raising them. It includes everything from plants being pollinated, to stags fighting over hinds, to lionesses babysitting their sisters' cubs.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Reproduction Strategy</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/Adaptation"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/EcosystemRole">
+    <rdfs:comment xml:lang="en-gb">Ecosystem roles are about the part an animal or plant plays in sustaining or maintaining the habitat around them. Bees, for example, pollinate flowers, without which those plants would not produce fruits or seeds. Other species, such as dung beetles, play a vital role in keeping grasslands clear of animal waste and recycling valuable resources.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Ecosystem Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/Adaptation"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/Phylum">
+    <rdfs:comment xml:lang="en-gb">A phylum - also known as a division when referring to plants - is a scientfic way of grouping together related organisms. All the members of a phylum have a common ancestor and anatomical similarities. For instance, all the arthropods have external skeletons. Phlya are large groups and are further subdivided into classes, orders, families and so on.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Phylum</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.bbc.co.uk/nature/phylum"/>
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Phylum"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/LifeCycle">
+    <rdfs:comment xml:lang="en-gb">An organism's Life Cycle describes the stages in an organisms development including metamorphosis, courtship displays and parental care..</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Life Cycle</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/Adaptation"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/ConservationStatus">
+    <rdfs:comment xml:lang="en-gb">Conservation status as described by the IUCN Red List. Will typically have a number of properties including an official IUCN status, population trend, and a year of assessment.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Conservation Status</rdfs:label>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/MorphologyAdaptation">
+    <rdfs:comment xml:lang="en-gb">Morphology is anything to do with what a plant or animal looks like - its size, shape, colour or structure.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Morphology</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/Adaptation"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/MarineHabitat">
+    <rdfs:comment>Approximately 71% of the Earth's surface is covered by the oceans, an area of some 223698816km/sq. Although marine life evolved around three billion years before life on land, marine habitats are relatively poorly studied and much of the ocean's depths remains unexplored.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Marine Habitat</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/Habitat"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/ontology/wo/scientificName">
+    <rdfs:comment xml:lang="en-gb">associates a taxon name with its formal scientific name. This may be a binomial name (e.g. Panthera leo) in the case of a species name, or a uninomial (e.g. Panthera) name in the case of a name associated with another taxon rank. In formal taxonomic naming conventions, the scientific name is often qualified with the source of the name, e.g. Panthera leo (Linnaeus, 1758).</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonName"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">scientific name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/ontology/wo/genusName">
+    <rdfs:comment xml:lang="en-gb">specifies the genus part of a binomial name, allowing this portion of the name to be explicitly described. Therefore this property will typically only be used in TaxonNames associated with species. The property is largely provided as a convenience to avoid applications having to parse the binomial name.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">genus name</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonName"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/wo/taxonomicName"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/ontology/wo/phylumName">
+    <rdfs:comment xml:lang="en-gb">Used to specify the name of a phylum as part of a Taxon Name</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">phylum name</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/wo/taxonomicName"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <foaf:Person rdf:about="http://purl.org/ontology/wo/#tom">
+    <foaf:name>Tom Scott</foaf:name>
+  </foaf:Person>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/Order">
+    <rdfs:comment xml:lang="en-gb">An order is a scientific way to categorise related organisms. An order is a smaller grouping than a class, but bigger than a family or genus. Examples of orders are willows, cockroaches and primates.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Order</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.bbc.co.uk/nature/order"/>
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Order_%28biology%29"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/BehaviouralPattern">
+    <rdfs:comment xml:lang="en-gb">Behavioural pattern describes an animal's dominant way of life. Arboreal animals, for example, live in trees and nocturnal animals are active at night.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Behavioural Pattern</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/Adaptation"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/AnimalIntelligence">
+    <rdfs:comment xml:lang="en-gb">Animal Intelligence or animal cognition is the title given to a modern approach to the mental capacities of non-human animals. It has developed out of comparative psychology, but has also been strongly influenced by the approach of ethology, behavioral ecology, and evolutionary psychology.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Animal Intelligence</rdfs:label>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/kingdom">
+    <rdfs:comment xml:lang="en-gb">associates a taxon rank with a kingdom</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">kingdom</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/ontology/wo/Kingdom"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/order">
+    <rdfs:comment xml:lang="en-gb">associates a taxon rank with an order</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">order</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/ontology/wo/Kingdom"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/distributionMap">
+    <rdfs:comment xml:lang="en-gb">associates a habitat, ecozone, or taxon rank with a map depicting its distribution or location</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">distribution map</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+    <ns1:term_status>unstable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/Class">
+    <rdfs:comment xml:lang="en-gb">A class is a scientific way to group related organisms together, some examples of classes being jellyfish, reptiles and sea urchins. Classes are big groups and contain within them smaller groupings called orders, families, genera and species.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Class</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.bbc.co.uk/nature/class"/>
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Class_%28biology%29"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/class">
+    <rdfs:comment xml:lang="en-gb">associates a taxon rank with a class</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">class</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/ontology/wo/Class"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/conservationStatus">
+    <rdfs:comment xml:lang="en-gb">associates a taxon rank with a description of a recent assessment of its conservation status</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">conservation status</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/ontology/wo/ConservationStatus"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/phylum">
+    <rdfs:comment xml:lang="en-gb">associates a taxon rank with a phylum</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">phylum</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/ontology/wo/Phylum"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/Habitat">
+    <rdfs:comment xml:lang="en-gb">A habitat, or biome, is the type of environment in which plant and animals live. Habitat is dictated by what kinds of plants grow there, the climate and the geography. Rainforest, coral reefs and the tundra are all habitats where particular kinds of plants and animals might be found.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Habitat</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.bbc.co.uk/nature/habitats"/>
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Habitat"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/TaxonName">
+    <rdfs:comment xml:lang="en-gb">A taxonomic name, describing the structure and provenance of a taxonomic name.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Taxon Name</rdfs:label>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/ecozone">
+    <rdfs:comment xml:lang="en-gb">indicates that a habitat or a taxon rank can be found within an ecozone</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">ecozone</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/ontology/wo/Ecozone"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/CommunicationAdaptation">
+    <rdfs:comment xml:lang="en-gb">Communication and senses are how an organism perceives the world - for instance through scent or sight - and how it sends messages or warnings to others.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Communication Adaptation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/Adaptation"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/ontology/wo/familyName">
+    <rdfs:comment xml:lang="en-gb">Used to specify the name of a family as part of a Taxon Name</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">family name</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/wo/taxonomicName"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/ontology/wo/threatDescription">
+    <rdfs:comment xml:lang="en-gb">description of the threat(s) that have been identified as part of the assessment of the Conservation Status of a taxon</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/ConservationStatus"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">threatDescription</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/TaxonRank">
+    <rdfs:comment xml:lang="en-gb">Generic concept for a taxonomic rank such as a Genus or Species.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Taxonomic Rank</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Taxonomic_rank"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/livesIn">
+    <rdfs:comment xml:lang="en-gb">associates a taxon rank with a habitat in which it lives. Sub-property of wo:habitat to be used for members of the animal kingdom</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">lives in</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/ontology/wo/Habitat"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/ExtremesAdaptation">
+    <rdfs:comment xml:lang="en-gb">Organisms that are adapted to extremes (known as Extremophiles) are organisms that thrives in and even may require physically or geochemically extreme conditions that are detrimental to the majority of life on Earth.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Adapted to Extremes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/Adaptation"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/wo/species">
+    <rdfs:comment xml:lang="en-gb">associates a taxon rank with a species</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/wo/TaxonRank"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">species</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/ontology/wo/Species"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://purl.org/ontology/wo/FeedingHabit">
+    <rdfs:comment xml:lang="en-gb">Feeding habits describe the dominant diet of a particular species or group of species, and how they go about obtaining it.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/wo/"/>
+    <rdfs:label xml:lang="en-gb">Feeding Habit</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/wo/Adaptation"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+</rdf:RDF>

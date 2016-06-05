@@ -1,0 +1,47 @@
+<rdf:RDF
+    xmlns:Dogs="http://aicmez.com/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xml:base="http://aicmez.com/Dogs#">
+		<rdf:Description rdf:ID="Golden_Retriever">
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<Dogs:Name>Golden Retriever</Dogs:Name>
+		<Dogs:Color>White</Dogs:Color>
+		<Dogs:Color>Golden</Dogs:Color>
+		<Dogs:CreerPar>A. Icmez</Dogs:CreerPar>
+		<Dogs:Date>June 2016</Dogs:Date>
+		<Dogs:EyeColor>Brown</Dogs:EyeColor>
+		<Dogs:Country>Scotland</Dogs:Country>
+		<Dogs:Country>United Kingdom</Dogs:Country>
+		<Dogs:Type>mammal</Dogs:Type>
+		<Dogs:Size>big</Dogs:Size>
+		<Dogs:Size>average</Dogs:Size>
+	</rdf:Description>
+	<rdf:Description rdf:ID="Bergamasco_Shepherd">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<Dogs:Name>Bergamasco Shepherd</Dogs:Name>
+		<Dogs:Color>Black</Dogs:Color>
+		<Dogs:Color>Gray</Dogs:Color>
+		<Dogs:CreerPar>A. Icmez</Dogs:CreerPar>
+		<Dogs:Date>June 2016</Dogs:Date>
+		<Dogs:EyeColor>Brown</Dogs:EyeColor>
+		<Dogs:Country>Italy</Dogs:Country>
+		<Dogs:Type>mammal</Dogs:Type>
+		<Dogs:Size>big</Dogs:Size>
+		<Dogs:Size>average</Dogs:Size>
+	</rdf:Description>
+	<rdf:Description rdf:ID="Bichon_Frise">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<Dogs:Name>Bichon Frise</Dogs:Name>
+		<Dogs:Color>White</Dogs:Color>
+		<Dogs:CreerPar>A. Icmez</Dogs:CreerPar>
+		<Dogs:Date>June 2016</Dogs:Date>
+		<Dogs:EyeColor>Black</Dogs:EyeColor>
+		<Dogs:Country>Belgium</Dogs:Country>
+		<Dogs:Country>Spain</Dogs:Country>
+		<Dogs:Type>mammal</Dogs:Type>
+		<Dogs:Size>small</Dogs:Size>
+	</rdf:Description>
+</rdf:RDF>
+
+

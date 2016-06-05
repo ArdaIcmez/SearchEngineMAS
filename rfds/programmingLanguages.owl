@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF[
+	<!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	<!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+	<!ENTITY owl 'http://www.w3.org/2002/07/owl#'>
+	<!ENTITY smw 'http://smw.ontoware.org/2005/smw#'>
+	<!ENTITY smwdt 'http://smw.ontoware.org/2005/smw-datatype#'>
+	<!ENTITY wiki 'http://ontoworld.org/wiki/Special:URIResolver/'>
+	<!ENTITY relation 'http://ontoworld.org/wiki/Special:URIResolver/Relation-3A'>
+	<!ENTITY attribute 'http://ontoworld.org/wiki/Special:URIResolver/Attribute-3A'>
+	<!ENTITY wikiurl 'http://ontoworld.org/wiki/'>
+]>
+
+<rdf:RDF
+	xmlns:rdf="&rdf;"
+	xmlns:rdfs="&rdfs;"
+	xmlns:owl ="&owl;"
+	xmlns:smw="&smw;"
+	xmlns:wiki="&wiki;"
+	xmlns:relation="&relation;"
+	xmlns:attribute="&attribute;"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/">
+	<!-- reference to the Semantic MediaWiki schema -->
+	<owl:AnnotationProperty rdf:about="&smw;hasArticle">
+		<rdfs:isDefinedBy rdf:resource="http://smw.ontoware.org/2005/smw"/>
+	</owl:AnnotationProperty>
+	<owl:AnnotationProperty rdf:about="&smw;hasType">
+		<rdfs:isDefinedBy rdf:resource="http://smw.ontoware.org/2005/smw"/>
+	</owl:AnnotationProperty>
+	<owl:Class rdf:about="&smw;Thing">
+		<rdfs:isDefinedBy rdf:resource="http://smw.ontoware.org/2005/smw"/>
+	</owl:Class>
+	<!-- exported page data -->
+	<smw:Thing rdf:about="&wiki;RDF">
+		<rdfs:label>RDF</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;RDF"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/RDF"/>
+		<rdf:type rdf:resource="&wiki;Category-3AOntology_language"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;Dublin_Core">
+		<rdfs:label>Dublin Core</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Dublin_Core"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Dublin_Core"/>
+		<rdf:type rdf:resource="&wiki;Category-3AOntology"/>
+		<relation:Formal_language rdf:resource="&wiki;RDF"/>
+		<attribute:Revision_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2006-10-28T00:00:00</attribute:Revision_date>
+		<attribute:Swoogle_hits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1364337</attribute:Swoogle_hits>
+		<attribute:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2006-10-28T00:00:00</attribute:Release_date>
+		<foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dublin Core</foaf:name>
+		<attribute:Namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/elements/1.1/</attribute:Namespace>
+		<foaf:homepage rdf:resource="http://dublincore.org"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;User-3AMovGP0">
+		<rdfs:label>User:MovGP0</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;User:MovGP0"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/User:MovGP0"/>
+		<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+		<foaf:member rdf:resource="&wiki;Semantic_Wiki_Interest_Group"/>
+		<relation:Speaks_natural_Language rdf:resource="&wiki;German"/>
+		<relation:Speaks_Programming-2DLanguage rdf:resource="&wiki;VHDL"/>
+		<relation:Speaks_Programming-2DLanguage rdf:resource="&wiki;SQL"/>
+		<relation:Speaks_Programming-2DLanguage rdf:resource="&wiki;C"/>
+		<relation:Speaks_Programming-2DLanguage rdf:resource="&wiki;CPlusPlus"/>
+		<relation:Speaks_Programming-2DLanguage rdf:resource="&wiki;Java"/>
+		<relation:Speaks_Programming-2DLanguage rdf:resource="&wiki;Assembler"/>
+		<relation:Speaks_Programming-2DLanguage rdf:resource="&wiki;CSharp"/>
+		<relation:Speaks_Markup-2DLanguage rdf:resource="&wiki;TeX"/>
+		<relation:Speaks_Markup-2DLanguage rdf:resource="&wiki;WikiText"/>
+		<relation:Speaks_Markup-2DLanguage rdf:resource="&wiki;OWL"/>
+		<relation:Speaks_Markup-2DLanguage rdf:resource="&wiki;RDF"/>
+		<relation:Speaks_Markup-2DLanguage rdf:resource="&wiki;XHTML"/>
+		<relation:Speaks_Markup-2DLanguage rdf:resource="&wiki;MathML"/>
+		<relation:Speaks_Markup-2DLanguage rdf:resource="&wiki;SVG"/>
+		<relation:Speaks_Markup-2DLanguage rdf:resource="&wiki;XSLT"/>
+		<relation:Speaks_Markup-2DLanguage rdf:resource="&wiki;CSS"/>
+		<relation:Speaks_Markup-2DLanguage rdf:resource="&wiki;XML"/>
+		<relation:Is_a rdf:resource="&wiki;Foaf-3APerson"/>
+		<relation:Is_a rdf:resource="&wiki;-CE-9CElectronics"/>
+		<relation:Interested_in rdf:resource="&wiki;Semantic_Web"/>
+		<relation:Foaf-3Atopic_interest rdf:resource="&wiki;Semantic_Web"/>
+		<relation:Interested_in rdf:resource="&wiki;Programming"/>
+		<relation:Speaks_natural_Language rdf:resource="&wiki;English"/>
+		<relation:Foaf-3Amaker rdf:resource="&wiki;User-3AMovGP0"/>
+		<relation:Foaf-3Ahomepage rdf:resource="&wiki;User-3AMovGP0"/>
+		<relation:Foaf-3AcurrentProject rdf:resource="&wiki;Main_Page"/>
+		<relation:European_Zodiac_Ascendent rdf:resource="&wiki;Cancer"/>
+		<relation:European_Zodiac rdf:resource="&wiki;Sagittarius"/>
+		<relation:Chinese_Zodiag rdf:resource="&wiki;Dog_-28Zodiag-29"/>
+		<relation:Chinese_Zodiac_Element rdf:resource="&wiki;Water_-28Zodiag-29"/>
+		<attribute:Foaf-3AworkInfoHomepage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://de.wikipedia.org/wiki/Benutzer:MovGP0#Ich_.C3.BCber_mich </attribute:Foaf-3AworkInfoHomepage>
+		<attribute:Foaf-3AworkplaceHomepage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://aon.at </attribute:Foaf-3AworkplaceHomepage>
+		<attribute:Foaf-3Atitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mr</attribute:Foaf-3Atitle>
+		<attribute:Foaf-3AschoolHomepage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.htl-karlstein.ac.at/ </attribute:Foaf-3AschoolHomepage>
+		<attribute:Foaf-3Anick rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MovGP0</attribute:Foaf-3Anick>
+		<foaf:mbox_sha1sum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7074170ebe54951b0bf4d8d8f5dcc5014c53bed1</foaf:mbox_sha1sum>
+		<rdfs:seeAlso rdf:resource="http://wiki.ontoworld.org/index.php/Special:ExportRDF?pages=User:MovGP0"/>
+		<attribute:Foaf-3Aknows rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dandjo.techie.at/_</attribute:Foaf-3Aknows>
+		<foaf:mbox rdf:resource="mailto:movgp0@gmail.com"/>
+		<attribute:Foaf-3Aimg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.csharp-online.net/images/d/d4/MovGP0.png </attribute:Foaf-3Aimg>
+		<foaf:homepage rdf:resource="http://de.wikipedia.org/wiki/Benutzer:MovGP0"/>
+		<foaf:homepage rdf:resource="http://en.csharp-online.net/index.php?title=User:MovGP0_"/>
+		<attribute:Foaf-3Agender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</attribute:Foaf-3Agender>
+		<attribute:Foaf-3AicqChatID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">222409885</attribute:Foaf-3AicqChatID>
+		<attribute:Foaf-3Ageekcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GCM/E/IT/S/TW/CC$ d s-: a-- C++ B L+ P E--- W+++ N++ o-- K- w++ O M V- PS- PE Y+ PGP t+ 5+ X R tv b++ DI D G e h! !r !y+</attribute:Foaf-3Ageekcode>
+		<attribute:Foaf-3Abirthday rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12-20</attribute:Foaf-3Abirthday>
+		<attribute:Foaf-3AaccountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MovGP0</attribute:Foaf-3AaccountName>
+		<attribute:Email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">movgp0@gmail.com</attribute:Email>
+		<attribute:IQ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</attribute:IQ>
+		<foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MovGP0</foaf:name>
+		<attribute:Date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1982-12-20T00:00:00</attribute:Date_of_birth>
+		<attribute:E-2DIQ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86</attribute:E-2DIQ>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;TrackBack">
+		<rdfs:label>TrackBack</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;TrackBack"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/TrackBack"/>
+		<rdf:type rdf:resource="&wiki;Category-3AOntology"/>
+		<relation:Formal_language rdf:resource="&wiki;RDF"/>
+		<attribute:Namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://madskills.com/public/xml/rss/module/trackback/</attribute:Namespace>
+		<foaf:homepage rdf:resource="http://madskills.com/public/xml/rss/module/trackback/"/>
+		<foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TrackBack Module for RSS 1.0</foaf:name>
+		<attribute:Swoogle_hits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">502401</attribute:Swoogle_hits>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;BIO">
+		<rdfs:label>BIO</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;BIO"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/BIO"/>
+		<rdf:type rdf:resource="&wiki;Category-3AOntology"/>
+		<relation:Formal_language rdf:resource="&wiki;RDF"/>
+		<attribute:Swoogle_hits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">220228</attribute:Swoogle_hits>
+		<attribute:Revision_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2004-03-05T00:00:00</attribute:Revision_date>
+		<attribute:Namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/vocab/bio/0.1/</attribute:Namespace>
+		<attribute:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2004-03-05T00:00:00</attribute:Release_date>
+		<foaf:homepage rdf:resource="http://purl.org/vocab/bio/"/>
+		<foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIO</foaf:name>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;VCard_RDF">
+		<rdfs:label>VCard RDF</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;VCard_RDF"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/VCard_RDF"/>
+		<rdf:type rdf:resource="&wiki;Category-3AOntology"/>
+		<relation:Formal_language rdf:resource="&wiki;RDF"/>
+		<attribute:Revision_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2001-02-22T00:00:00</attribute:Revision_date>
+		<attribute:Namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2001/vcard-rdf/3.0#</attribute:Namespace>
+		<attribute:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2001-02-22T00:00:00</attribute:Release_date>
+		<attribute:Swoogle_hits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">181962</attribute:Swoogle_hits>
+		<foaf:homepage rdf:resource="http://www.w3.org/TR/vcard-rdf"/>
+		<foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vCard</foaf:name>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;MetaVocab">
+		<rdfs:label>MetaVocab</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;MetaVocab"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/MetaVocab"/>
+		<rdf:type rdf:resource="&wiki;Category-3AOntology"/>
+		<relation:Formal_language rdf:resource="&wiki;RDF"/>
+		<attribute:Swoogle_hits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">441790</attribute:Swoogle_hits>
+		<attribute:Revision_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-02-16T00:00:00</attribute:Revision_date>
+		<attribute:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-02-16T00:00:00</attribute:Release_date>
+		<foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MetaVocab</foaf:name>
+		<attribute:Namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://webns.net/mvcb/</attribute:Namespace>
+		<foaf:homepage rdf:resource="http://web.resource.org/rss/1.0/modules/admin/"/>
+	</smw:Thing>
+	<!-- auxilliary definitions -->
+	<owl:Class rdf:about="&wiki;Category-3AOntology_language">
+		<rdfs:label>Category:Ontology language</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Category:Ontology_language"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Category:Ontology_language"/>
+	</owl:Class>
+	<owl:Class rdf:about="&wiki;Category-3AOntology">
+		<rdfs:label>Category:Ontology</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Category:Ontology"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Category:Ontology"/>
+	</owl:Class>
+	<owl:ObjectProperty rdf:about="&relation;Formal_language">
+		<rdfs:label>Relation:Formal language</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Formal_language"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Formal_language"/>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Revision_date">
+		<rdfs:label>Attribute:Revision date</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Revision_date"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Revision_date"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Swoogle_hits">
+		<rdfs:label>Attribute:Swoogle hits</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Swoogle_hits"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Swoogle_hits"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Release_date">
+		<rdfs:label>Attribute:Release date</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Release_date"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Release_date"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+		<rdfs:label>Attribute:Name</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Name"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Name"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Namespace">
+		<rdfs:label>Attribute:Namespace</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Namespace"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Namespace"/>
+	</owl:DatatypeProperty>
+	<owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/homepage">
+		<rdfs:label>Attribute:Homepage</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Homepage"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Homepage"/>
+	</owl:ObjectProperty>
+	<owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+		<rdfs:label>Category:Person</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Category:Person"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Category:Person"/>
+	</owl:Class>
+	<owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/member">
+		<rdfs:label>Relation:Foaf:member</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Foaf:member"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Foaf:member"/>
+	</owl:ObjectProperty>
+	<smw:Thing rdf:about="&wiki;Semantic_Wiki_Interest_Group">
+		<rdfs:label>Semantic Wiki Interest Group</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Semantic_Wiki_Interest_Group"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Semantic_Wiki_Interest_Group"/>
+	</smw:Thing>
+	<owl:ObjectProperty rdf:about="&relation;Speaks_natural_Language">
+		<rdfs:label>Relation:Speaks natural Language</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Speaks_natural_Language"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Speaks_natural_Language"/>
+	</owl:ObjectProperty>
+	<smw:Thing rdf:about="&wiki;German">
+		<rdfs:label>German</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;German"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/German"/>
+	</smw:Thing>
+	<owl:ObjectProperty rdf:about="&relation;Speaks_Programming-2DLanguage">
+		<rdfs:label>Relation:Speaks Programming-Language</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Speaks_Programming-Language"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Speaks_Programming-Language"/>
+	</owl:ObjectProperty>
+	<smw:Thing rdf:about="&wiki;VHDL">
+		<rdfs:label>VHDL</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;VHDL"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/VHDL"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;SQL">
+		<rdfs:label>SQL</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;SQL"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/SQL"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;C">
+		<rdfs:label>C</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;C"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/C"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;CPlusPlus">
+		<rdfs:label>CPlusPlus</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;CPlusPlus"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/CPlusPlus"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;Java">
+		<rdfs:label>Java</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Java"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Java"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;Assembler">
+		<rdfs:label>Assembler</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Assembler"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Assembler"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;CSharp">
+		<rdfs:label>CSharp</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;CSharp"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/CSharp"/>
+	</smw:Thing>
+	<owl:ObjectProperty rdf:about="&relation;Speaks_Markup-2DLanguage">
+		<rdfs:label>Relation:Speaks Markup-Language</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Speaks_Markup-Language"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Speaks_Markup-Language"/>
+	</owl:ObjectProperty>
+	<smw:Thing rdf:about="&wiki;TeX">
+		<rdfs:label>TeX</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;TeX"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/TeX"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;WikiText">
+		<rdfs:label>WikiText</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;WikiText"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/WikiText"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;OWL">
+		<rdfs:label>OWL</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;OWL"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/OWL"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;XHTML">
+		<rdfs:label>XHTML</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;XHTML"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/XHTML"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;MathML">
+		<rdfs:label>MathML</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;MathML"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/MathML"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;SVG">
+		<rdfs:label>SVG</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;SVG"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/SVG"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;XSLT">
+		<rdfs:label>XSLT</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;XSLT"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/XSLT"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;CSS">
+		<rdfs:label>CSS</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;CSS"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/CSS"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;XML">
+		<rdfs:label>XML</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;XML"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/XML"/>
+	</smw:Thing>
+	<owl:ObjectProperty rdf:about="&relation;Is_a">
+		<rdfs:label>Relation:Is a</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Is_a"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Is_a"/>
+	</owl:ObjectProperty>
+	<smw:Thing rdf:about="&wiki;Foaf-3APerson">
+		<rdfs:label>Foaf:Person</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Foaf:Person"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Foaf:Person"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;-CE-9CElectronics">
+		<rdfs:label>ΜElectronics</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;%CE%9CElectronics"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/%CE%9CElectronics"/>
+	</smw:Thing>
+	<owl:ObjectProperty rdf:about="&relation;Interested_in">
+		<rdfs:label>Relation:Interested in</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Interested_in"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Interested_in"/>
+	</owl:ObjectProperty>
+	<smw:Thing rdf:about="&wiki;Semantic_Web">
+		<rdfs:label>Semantic Web</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Semantic_Web"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Semantic_Web"/>
+	</smw:Thing>
+	<owl:ObjectProperty rdf:about="&relation;Foaf-3Atopic_interest">
+		<rdfs:label>Relation:Foaf:topic interest</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Foaf:topic_interest"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Foaf:topic_interest"/>
+	</owl:ObjectProperty>
+	<smw:Thing rdf:about="&wiki;Programming">
+		<rdfs:label>Programming</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Programming"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Programming"/>
+	</smw:Thing>
+	<smw:Thing rdf:about="&wiki;English">
+		<rdfs:label>English</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;English"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/English"/>
+	</smw:Thing>
+	<owl:ObjectProperty rdf:about="&relation;Foaf-3Amaker">
+		<rdfs:label>Relation:Foaf:maker</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Foaf:maker"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Foaf:maker"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="&relation;Foaf-3Ahomepage">
+		<rdfs:label>Relation:Foaf:homepage</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Foaf:homepage"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Foaf:homepage"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="&relation;Foaf-3AcurrentProject">
+		<rdfs:label>Relation:Foaf:currentProject</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Foaf:currentProject"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Foaf:currentProject"/>
+	</owl:ObjectProperty>
+	<smw:Thing rdf:about="&wiki;Main_Page">
+		<rdfs:label>Main Page</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Main_Page"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Main_Page"/>
+	</smw:Thing>
+	<owl:ObjectProperty rdf:about="&relation;European_Zodiac_Ascendent">
+		<rdfs:label>Relation:European Zodiac Ascendent</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:European_Zodiac_Ascendent"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:European_Zodiac_Ascendent"/>
+	</owl:ObjectProperty>
+	<smw:Thing rdf:about="&wiki;Cancer">
+		<rdfs:label>Cancer</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Cancer"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Cancer"/>
+	</smw:Thing>
+	<owl:ObjectProperty rdf:about="&relation;European_Zodiac">
+		<rdfs:label>Relation:European Zodiac</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:European_Zodiac"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:European_Zodiac"/>
+	</owl:ObjectProperty>
+	<smw:Thing rdf:about="&wiki;Sagittarius">
+		<rdfs:label>Sagittarius</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Sagittarius"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Sagittarius"/>
+	</smw:Thing>
+	<owl:ObjectProperty rdf:about="&relation;Chinese_Zodiag">
+		<rdfs:label>Relation:Chinese Zodiag</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Chinese_Zodiag"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Chinese_Zodiag"/>
+	</owl:ObjectProperty>
+	<smw:Thing rdf:about="&wiki;Dog_-28Zodiag-29">
+		<rdfs:label>Dog (Zodiag)</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Dog_(Zodiag)"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Dog_(Zodiag)"/>
+	</smw:Thing>
+	<owl:ObjectProperty rdf:about="&relation;Chinese_Zodiac_Element">
+		<rdfs:label>Relation:Chinese Zodiac Element</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Relation:Chinese_Zodiac_Element"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Relation:Chinese_Zodiac_Element"/>
+	</owl:ObjectProperty>
+	<smw:Thing rdf:about="&wiki;Water_-28Zodiag-29">
+		<rdfs:label>Water (Zodiag)</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Water_(Zodiag)"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Water_(Zodiag)"/>
+	</smw:Thing>
+	<owl:DatatypeProperty rdf:about="&attribute;Foaf-3AworkInfoHomepage">
+		<rdfs:label>Attribute:Foaf:workInfoHomepage</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Foaf:workInfoHomepage"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Foaf:workInfoHomepage"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Foaf-3AworkplaceHomepage">
+		<rdfs:label>Attribute:Foaf:workplaceHomepage</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Foaf:workplaceHomepage"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Foaf:workplaceHomepage"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Foaf-3Atitle">
+		<rdfs:label>Attribute:Foaf:title</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Foaf:title"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Foaf:title"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Foaf-3AschoolHomepage">
+		<rdfs:label>Attribute:Foaf:schoolHomepage</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Foaf:schoolHomepage"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Foaf:schoolHomepage"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Foaf-3Anick">
+		<rdfs:label>Attribute:Foaf:nick</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Foaf:nick"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Foaf:nick"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/mbox_sha1sum">
+		<rdfs:label>Attribute:Foaf:mbox sha1sum</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Foaf:mbox_sha1sum"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Foaf:mbox_sha1sum"/>
+	</owl:DatatypeProperty>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+		<rdfs:label>Attribute:See also</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:See_also"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:See_also"/>
+	</owl:AnnotationProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Foaf-3Aknows">
+		<rdfs:label>Attribute:Foaf:knows</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Foaf:knows"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Foaf:knows"/>
+	</owl:DatatypeProperty>
+	<owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/mbox">
+		<rdfs:label>Attribute:Foaf:mbox</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Foaf:mbox"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Foaf:mbox"/>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Foaf-3Aimg">
+		<rdfs:label>Attribute:Foaf:img</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Foaf:img"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Foaf:img"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Foaf-3Agender">
+		<rdfs:label>Attribute:Foaf:gender</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Foaf:gender"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Foaf:gender"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Foaf-3AicqChatID">
+		<rdfs:label>Attribute:Foaf:icqChatID</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Foaf:icqChatID"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Foaf:icqChatID"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Foaf-3Ageekcode">
+		<rdfs:label>Attribute:Foaf:geekcode</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Foaf:geekcode"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Foaf:geekcode"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Foaf-3Abirthday">
+		<rdfs:label>Attribute:Foaf:birthday</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Foaf:birthday"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Foaf:birthday"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Foaf-3AaccountName">
+		<rdfs:label>Attribute:Foaf:accountName</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Foaf:accountName"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Foaf:accountName"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Email">
+		<rdfs:label>Attribute:Email</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Email"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Email"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;IQ">
+		<rdfs:label>Attribute:IQ</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:IQ"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:IQ"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;Date_of_birth">
+		<rdfs:label>Attribute:Date of birth</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:Date_of_birth"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:Date_of_birth"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="&attribute;E-2DIQ">
+		<rdfs:label>Attribute:E-IQ</rdfs:label>
+		<smw:hasArticle rdf:resource="&wikiurl;Attribute:E-IQ"/>
+		<rdfs:isDefinedBy rdf:resource="&wikiurl;Special:ExportRDF/Attribute:E-IQ"/>
+	</owl:DatatypeProperty>
+</rdf:RDF>

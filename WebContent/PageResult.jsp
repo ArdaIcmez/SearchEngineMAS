@@ -20,17 +20,20 @@
 	out.print("<td>");
 	out.print("</td>");
 	out.print("</tr>");
-	
+	int i = 1;
 	while(iter2.hasNext()){
 		PredObj predObj = (PredObj)iter2.next();		
-		out.print("<tr>");
-		out.print("<td>");
-		out.print(predObj.getPredicate());
-		out.print("</td>");
-		out.print("<td>");
+		out.print("<tr>\n");
+		out.print("\t<td>\n");
+		out.print("\t\t"+predObj.getPredicate());
+		out.print("\t</td>\n");
+		out.print("\t<td>\n");
+		out.print("\t\t<textarea name=\""+myObj.getSubject()+"-"+i+ "\" rows=\"1\" cols=\"30\">");
 		out.print(predObj.getObj());
-		out.print("</td>");
-		out.print("</tr>");
+		out.print("</textarea>\n");
+		out.print("\t</td>");
+		out.print("</tr>\n");
+		i++;
 		}
 
 	out.print("<tr>");
@@ -40,5 +43,5 @@
 	} %>
 </table>
 <br><br><br>
-<input type="submit" name="todo" value="Back to Search">
+<input type="submit" name="todo" value="Back to Search"> <button name="todo" value="modifyPage" type="submit">Modify</button>
 </form>
